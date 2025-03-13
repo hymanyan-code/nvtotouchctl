@@ -1,6 +1,9 @@
 #include <stdint.h>
 #include "M0518.h"
 #include <stdio.h>
+#include "OS_System.h"
+#include "CPU.h"
+#include "hal_task.h"
 #define PLL_CLOCK   50000000
 
 void SYS_Init(void)
@@ -57,7 +60,7 @@ void Delay(uint32_t ms)
     }
 }
 
-void UART1_Init(void)
+void DEBUG_UART1_Init(void)
 {
     /*---------------------------------------------------------------------------------------------------------*/
     /* Init UART                                                                                               */
@@ -75,29 +78,24 @@ int main(void)
 	SYS_UnlockReg();
 	SYS_Init();
 	SYS_LockReg();
-	UART1_Init();
+    DEBUG_UART1_Init();
 	printf("\n\nCPU @ %d Hz\n", SystemCoreClock);
     printf("HardWare Initialize!!!!\n");
 
-
-
-    GPIO_SetMode(PD, BIT6, GPIO_PMD_OUTPUT);
-    GPIO_SetMode(PA, BIT8, GPIO_PMD_OUTPUT);
-
-
+    hal_CPUInit();
+	OS_TaskInit();
+	
+    GPIO_SetMode(PD, BIT6, GPIO_PMD_OUTPUT);    //beep
     PD6 = 0;
-    PA8 = 0;
 
 
-    while (1)
-    {
-				//SendChar_ToUART(0x31);
-				UART1->DATA = (uint32_t)0x31;
-        Delay(100);
-        PA8 = 1;
-        Delay(100);
-        PA8 = 0;
-    }
+    hal_task_init();		
+	OS_CreatTask(OS_TASK1,hal_task,1,OS_RUN);	
+
+    
+    OS_Start();	 
 
 
+
+   
 }

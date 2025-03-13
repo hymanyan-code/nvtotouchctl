@@ -20,3 +20,6 @@
 .\objects\main.o: ..\StdDriver\inc\uart.h
 .\objects\main.o: ..\StdDriver\inc\clk.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\OS\OS_System.h
+.\objects\main.o: ..\OS\CPU.h
+.\objects\main.o: ..\Hal\hal_task.h
