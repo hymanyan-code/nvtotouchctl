@@ -1,7 +1,7 @@
 #include "M0518.h"
 #include "hal_io.h"
 #include "hal_timer.h"
-
+#include "stdio.h"
 volatile uint8_t g_input_state;
 volatile uint8_t g_output_state;
 
@@ -140,13 +140,15 @@ void hal_handle_input_1ms_loop(void)
             trigger_flag[i] = 0;
             if(bit_state & (1 << i))
             {
-                hal_output_set(i+1, 1);
+                printf("input %d is on", i);
                 g_input_state |= (1 << i);
+                g_output_state |= (1 << i);
             }
             else
             {
-                hal_output_set(i+1, 0);
+                printf("input %d is off", i);
                 g_input_state &= ~(1 << i);
+                g_output_state &= ~(1 << i);
             }
         }
 
