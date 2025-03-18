@@ -1,8 +1,7 @@
-#include "stm32F10x.h"
+#include "M0518.h"
 #include "hal_timer.h"
-#include "hal_led.h"
 #include "string.h"
-#include "para.h"
+
 
 volatile Stu_TimerTypedef Stu_Timer[T_SUM];
 
@@ -14,30 +13,17 @@ volatile Stu_TimerTypedef Stu_Timer[T_SUM];
 * Return         : None
 * Attention		 	 : None
 *******************************************************************************/
-static void hal_timer4Config(void)
+static void hal_timer1Config(void)
 {
-	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
-	NVIC_InitTypeDef NVIC_InitStructure;
-	
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
-	
-	TIM_DeInit(TIM4); 
-	TIM_TimeBaseStructure.TIM_Period = 50; 			    // 50uS
-	TIM_TimeBaseStructure.TIM_Prescaler = SystemCoreClock/1000000 - 1;              
-	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;     
-	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up; 
-	TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);	
-	
-	TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE); ///打开定时器4中断				 
-	TIM_Cmd(TIM4, ENABLE);   ///打开定时器4
 
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置NVIC中断分组2
-	
-	NVIC_InitStructure.NVIC_IRQChannel = TIM4_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;///先占优先级
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;        ///从优先级
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_Init(&NVIC_InitStructure);
+	 /* Open Timer1 in periodic mode, enable interrupt and 2 interrupt ticks per second */
+	 TIMER_Open(TIMER1, TIMER_PERIODIC_MODE, 200000); //50us cycle
+	 TIMER_EnableInt(TIMER1);
+	 
+	 NVIC_EnableIRQ(TMR1_IRQn);
+
+	 TIMER_Start(TIMER1);
+
 }
 
 
@@ -49,10 +35,10 @@ static void hal_timer4Config(void)
 * Return         : None
 * Attention		 	 : None
 *******************************************************************************/
-void hal_timerInit(void)
+void hal_MatrixtimerInit(void)
 {
 	unsigned char i;
-	hal_timer4Config();
+	hal_timer1Config();
 	for(i=0; i<T_SUM; i++)
 	{
 		Stu_Timer[i].state = T_STA_STOP;
@@ -212,12 +198,18 @@ static void Hal_TimerHandle(void)
 * Return         : None
 * Attention		 	 : None
 *******************************************************************************/
-void TIM4_IRQHandler(void)
+
+void TMR1_IRQHandler(void)
 {
-	Hal_TimerHandle();
-	TIM_ClearFlag(TIM4, TIM_FLAG_Update);
-	SystemTime_local();
+    if(TIMER_GetIntFlag(TIMER1) == 1)
+    {
+        /* Clear Timer1 time-out interrupt flag */
+        TIMER_ClearIntFlag(TIMER1);
+		Hal_TimerHandle();	
+    }
 }
+
+
 
 /////////////////////////////////
 

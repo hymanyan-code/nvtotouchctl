@@ -3,9 +3,9 @@
 
 typedef enum
 {
-	T_LED,					//LED定时器
-    T_WTN6,
-	T_DEC_OFFLINE,
+	T_BEEP,					//LED定时器
+    T_INPUT,
+	T_OUTPUT,
 	T_SUM,
 }TIMER_ID_TYPEDEF;
 	
@@ -32,7 +32,7 @@ typedef struct
 }Stu_TimerTypedef;
 
 
-void hal_timerInit(void);
+void hal_MatrixtimerInit(void);
 void hal_CreatTimer(TIMER_ID_TYPEDEF id,void (*proc)(void), unsigned short Period,TIMER_STATE_TYPEDEF state);
 TIMER_RESULT_TYPEDEF hal_CtrlTimerAction(TIMER_ID_TYPEDEF id,TIMER_STATE_TYPEDEF sta);
 TIMER_RESULT_TYPEDEF hal_ResetTimer(TIMER_ID_TYPEDEF id,TIMER_STATE_TYPEDEF sta);

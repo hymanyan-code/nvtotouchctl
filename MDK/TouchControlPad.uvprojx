@@ -535,6 +535,21 @@
               <FileType>1</FileType>
               <FilePath>..\Hal\hal_task.c</FilePath>
             </File>
+            <File>
+              <FileName>hal_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal_beep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_beep.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_io.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
