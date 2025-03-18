@@ -29,7 +29,7 @@ void SYS_Init(void)
 
     /* Set core clock as PLL_CLOCK from PLL */
     CLK_SetCoreClock(PLL_CLOCK);
-    CLK_SetSysTickClockSrc(CLK_CLKSEL0_STCLK_S_HCLK_DIV2);
+   // CLK_SetSysTickClockSrc(CLK_CLKSEL0_STCLK_S_HCLK_DIV2);
 
     /* Enable UART module clock */
     CLK_EnableModuleClock(UART1_MODULE);
@@ -90,8 +90,8 @@ int main(void)
     hal_CPUInit();
 	OS_TaskInit();
 	
-    GPIO_SetMode(PD, BIT6, GPIO_PMD_OUTPUT);    //beep
-    PD6 = 0;
+   // GPIO_SetMode(PD, BIT6, GPIO_PMD_OUTPUT);    //beep
+   // PD6 = 0;
 
 
     hal_task_init();		

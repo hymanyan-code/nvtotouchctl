@@ -1,5 +1,6 @@
 #include "M0518.h"
 #include "hal_io.h"
+#include "hal_beep.h"
 #include "hal_timer.h"
 #include "stdio.h"
 volatile uint8_t g_input_state;
@@ -23,7 +24,7 @@ void hal_io_init(void)
     GPIO_SetMode(OUT3_PORT, OUT3_PIN, GPIO_PMD_OUTPUT); 
     GPIO_SetMode(OUT4_PORT, OUT4_PIN, GPIO_PMD_OUTPUT);
     GPIO_SetMode(OUT5_PORT, OUT5_PIN, GPIO_PMD_OUTPUT);
-
+		GPIO_SetMode(OUT6_PORT, OUT6_PIN, GPIO_PMD_OUTPUT);
     OUT1_PORT_PIN = 0;
     OUT2_PORT_PIN = 0; 
     OUT3_PORT_PIN = 0;
@@ -121,11 +122,11 @@ void hal_handle_input_1ms_loop(void)
     static uint8_t bit_state_previou;
     static uint8_t trigger_flag[8] = {0};   
 
-    bit_state = (BIT0 & hal_input_read(1)) | (BIT1 & hal_input_read(2)<<1 )| (BIT2 & hal_input_read(3) <<2)| (BIT3 & hal_input_read(4)<<3) | (BIT4 & hal_input_read(5)<<4) | (BIT5 & hal_input_read(6)<<5) | (BIT6 & hal_input_read(7)<<6 )| (BIT7 & hal_input_read(8)<<7);
+    bit_state = (BIT0 & hal_input_read(1)) | (BIT1 & (hal_input_read(2)<<1) )| (BIT2 & (hal_input_read(3) <<2))| (BIT3 & (hal_input_read(4)<<3)) | (BIT4 & (hal_input_read(5)<<4)) | (BIT5 & (hal_input_read(6)<<5)) | (BIT6 & (hal_input_read(7)<<6) )| (BIT7 & (hal_input_read(8)<<7));
 
     for(uint8_t i = 0; i < 8; i++)
     {
-        if(bit_state & (1 << i) != bit_state_previou & (1 << i))
+        if((bit_state & (1 << i)) != (bit_state_previou & (1 << i)))
         {
             filter_cnt[i] = 0;
             trigger_flag[i] = 1 ;
@@ -140,6 +141,8 @@ void hal_handle_input_1ms_loop(void)
             trigger_flag[i] = 0;
             if(bit_state & (1 << i))
             {
+								hal_beep_on();
+	              hal_CreatTimer(T_BEEP,hal_beep_off, 40000, T_STA_START); //2 seconds
                 printf("input %d is on", i);
                 g_input_state |= (1 << i);
                 g_output_state |= (1 << i);
@@ -163,17 +166,17 @@ void hal_handle_output_1ms_loop(void)
     static uint8_t bit_state;
     static uint8_t bit_state_previou;
 	bit_state = g_output_state;
-    for (uint8_t i = 1; i < 7; i++)
+    for (uint8_t i = 0; i < 8; i++)
     {
-        if(bit_state & (1 << i) != bit_state_previou & (1 << i))
+        if((bit_state & (1 << i)) != (bit_state_previou & (1 << i)))
         {
             if(bit_state & (1 << i))
             {
-                hal_output_set(i, 1);
+                hal_output_set(i+1, 1);
             }
             else
             {
-                hal_output_set(i, 0);
+                hal_output_set(i+1, 0);
             }
         }
     }

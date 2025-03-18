@@ -58,7 +58,7 @@
 #define OUT5_PORT_PIN    PA10
 
 #define OUT6_PORT        PA
-#define OUT6_PIN         BI9
+#define OUT6_PIN         BIT9
 #define OUT6_PORT_PIN    PA9
 
 
