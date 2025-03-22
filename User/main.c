@@ -33,10 +33,14 @@ void SYS_Init(void)
 
     /* Enable UART module clock */
     CLK_EnableModuleClock(UART1_MODULE);
+    CLK_EnableModuleClock(UART4_MODULE);
+
     CLK_EnableModuleClock(TMR1_MODULE);
 
     /* Select UART module clock source */
     CLK_SetModuleClock(UART1_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
+    CLK_SetModuleClock(UART4_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
+
     CLK_SetModuleClock(TMR1_MODULE, CLK_CLKSEL1_TMR1_S_HCLK, 0);
 
 
@@ -48,6 +52,9 @@ void SYS_Init(void)
     /* Set GPB multi-function pins for UART0 RXD(PB.0) and TXD(PB.1) */
     SYS->GPB_MFP &= ~(SYS_GPB_MFP_PB4_Msk | SYS_GPB_MFP_PB5_Msk);
     SYS->GPB_MFP |= (SYS_GPB_MFP_PB4_UART1_RXD | SYS_GPB_MFP_PB5_UART1_TXD);
+
+    SYS->GPB_MFP &= ~(SYS_GPC_MFP_PC7_Msk | SYS_GPC_MFP_PC6_Msk);
+    SYS->GPB_MFP |= (SYS_GPC_MFP_PC7_UART4_RXD | SYS_GPC_MFP_PC6_UART4_TXD);
 
 }
 

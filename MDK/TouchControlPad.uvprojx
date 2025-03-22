@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core;..\System;..\StdDriver\inc;..\OS;..\Hal</IncludePath>
+              <IncludePath>..\Core;..\System;..\StdDriver\inc;..\OS;..\Hal;..\Modbus\port;..\Modbus\modbus\include;..\Modbus\modbus\rtu</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -549,6 +549,56 @@
               <FileName>hal_io.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Hal\hal_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal_rs485.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_rs485.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MODBUS</GroupName>
+          <Files>
+            <File>
+              <FileName>portevent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\port\portevent.c</FilePath>
+            </File>
+            <File>
+              <FileName>portserial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\port\portserial.c</FilePath>
+            </File>
+            <File>
+              <FileName>porttimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\port\porttimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncholding.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\modbus\functions\mbfuncholding.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbutils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\modbus\functions\mbutils.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbcrc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\modbus\rtu\mbcrc.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbrtu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\modbus\rtu\mbrtu.c</FilePath>
+            </File>
+            <File>
+              <FileName>mb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Modbus\modbus\mb.c</FilePath>
             </File>
           </Files>
         </Group>

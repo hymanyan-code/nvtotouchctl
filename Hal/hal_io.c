@@ -24,7 +24,7 @@ void hal_io_init(void)
     GPIO_SetMode(OUT3_PORT, OUT3_PIN, GPIO_PMD_OUTPUT); 
     GPIO_SetMode(OUT4_PORT, OUT4_PIN, GPIO_PMD_OUTPUT);
     GPIO_SetMode(OUT5_PORT, OUT5_PIN, GPIO_PMD_OUTPUT);
-		GPIO_SetMode(OUT6_PORT, OUT6_PIN, GPIO_PMD_OUTPUT);
+	GPIO_SetMode(OUT6_PORT, OUT6_PIN, GPIO_PMD_OUTPUT);
     OUT1_PORT_PIN = 0;
     OUT2_PORT_PIN = 0; 
     OUT3_PORT_PIN = 0;
@@ -143,13 +143,13 @@ void hal_handle_input_1ms_loop(void)
             {
 								hal_beep_on();
 	              hal_CreatTimer(T_BEEP,hal_beep_off, 40000, T_STA_START); //2 seconds
-                printf("input %d is on", i);
+                printf("input %d is on\r\n", i);
                 g_input_state |= (1 << i);
                 g_output_state |= (1 << i);
             }
             else
             {
-                printf("input %d is off", i);
+                printf("input %d is off\r\n", i);
                 g_input_state &= ~(1 << i);
                 g_output_state &= ~(1 << i);
             }
