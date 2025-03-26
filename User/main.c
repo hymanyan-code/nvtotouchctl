@@ -96,6 +96,7 @@ int main(void)
 
     hal_CPUInit();
 	OS_TaskInit();
+    __NOP();
 	
    // GPIO_SetMode(PD, BIT6, GPIO_PMD_OUTPUT);    //beep
    // PD6 = 0;
