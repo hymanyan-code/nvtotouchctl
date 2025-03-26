@@ -4,8 +4,6 @@
 typedef enum
 {
 	T_BEEP,					//LED定时器
-    T_INPUT,
-	T_OUTPUT,
 	T_MODBUS,
 	T_SUM,
 }TIMER_ID_TYPEDEF;

@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core;..\System;..\StdDriver\inc;..\OS;..\Hal;..\Modbus\port;..\Modbus\modbus\include;..\Modbus\modbus\rtu</IncludePath>
+              <IncludePath>..\Core;..\System;..\StdDriver\inc;..\OS;..\Hal;..\Modbus\port;..\Modbus\modbus\include;..\Modbus\modbus\rtu;..\MT</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -555,6 +555,11 @@
               <FileType>1</FileType>
               <FilePath>..\Hal\hal_rs485.c</FilePath>
             </File>
+            <File>
+              <FileName>hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -599,6 +604,21 @@
               <FileName>mb.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Modbus\modbus\mb.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MT</GroupName>
+          <Files>
+            <File>
+              <FileName>mt_modbus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MT\mt_modbus.c</FilePath>
+            </File>
+            <File>
+              <FileName>mt_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MT\mt_task.c</FilePath>
             </File>
           </Files>
         </Group>

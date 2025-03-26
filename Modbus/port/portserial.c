@@ -43,18 +43,18 @@ UCHAR           ucCriticalNesting = 0x00;
 void
 vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 {
-   // ENTER_CRITICAL_SECTION(  );
+   //ENTER_CRITICAL_SECTION(  );
     if( xRxEnable )
     {
         //UART_EnableInt(UART4, (UART_IER_RDA_IEN_Msk ));
-        UART_ENABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
-        printf("enable rx\r\n");
+       UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
+        //printf("enable rx\r\n");
     }
     else
     {
         UART_DISABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
         //UART_DisableInt(UART4, (UART_IER_RDA_IEN_Msk ));
-        printf("disable rx\r\n");
+       // printf("disable rx\r\n");
     }
     if( xTxEnable )
     {
@@ -63,10 +63,10 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
     }
     else
     {
-        UART_DISABLE_INT(UART4, UART_IER_TOUT_IEN_Msk);
+        UART_DISABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
        // UART_DisableInt(UART4, ( UART_IER_TOUT_IEN_Msk));
     }
-  //  EXIT_CRITICAL_SECTION(  );
+   //EXIT_CRITICAL_SECTION(  );
 }
 
 BOOL
@@ -96,9 +96,13 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
 
         /* Configure UART0 and set UART0 Baudrate */
         UART_Open(UART4, 115200);
-       // UART_SetLine_Config(UART4, ulBaudRate, UART_WORD_LEN_8,  u32parity,  UART_STOP_BIT_1);
+         //UART_SetLine_Config(UART4, ulBaudRate, UART_WORD_LEN_8,  u32parity,  UART_STOP_BIT_1);
       // NVIC_EnableIRQ(UART4_IRQn);
+      //UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
         NVIC_EnableIRQ(UART4_IRQn);
+       // UART4->FCR &= ~(UART_FCR_RFITL_Msk | UART_FCR_RTS_TRI_LEV_Msk);
+
+      //  UART4->FIFO =((UART4->FIFO&(~UART_FIFO_RFITL_MASK))|UART4_FIFO_RFITL_4BYTES);
         //UART_EnableInt(UART0, (UART_IER_RDA_IEN_Msk | UART_IER_THRE_IEN_Msk ));
         EXIT_CRITICAL_SECTION(  );
    
@@ -109,7 +113,7 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
 BOOL
 xMBPortSerialPutByte( CHAR ucByte )
 {
-    UART_Write(UART4,&ucByte,1);
+    UART_Write(UART4,(uint8_t*)(&ucByte),1);
     return TRUE;
 }
 
@@ -117,14 +121,14 @@ BOOL
 xMBPortSerialGetByte( CHAR * pucByte )
 {
     //*pucByte = UART_READ(UART4);
-    UART_Read(UART4,pucByte,1);
-    printf("%d\r\n",*pucByte);
+    UART_Read(UART4,(uint8_t*)pucByte,1);
+   // printf("%02x\r\n",*pucByte);
     return TRUE;
 }
 
 
 
-void EnterCriticalSection(void)S
+void EnterCriticalSection(void)
 {
     uint32_t primask;
     
@@ -158,7 +162,7 @@ void UART4_IRQHandler(void)
 {
  
     uint32_t u32IntSts = UART4->ISR;
-    printf("u32IntSts%d\r\n",u32IntSts);
+    //printf("u32IntSts:%d\r\n",u32IntSts);
     /* Receive Data Available Interrupt Handle */
     if(u32IntSts & UART_ISR_RDA_INT_Msk)
     {

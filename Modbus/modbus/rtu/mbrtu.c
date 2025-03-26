@@ -154,8 +154,12 @@ eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
 
     ENTER_CRITICAL_SECTION(  );
     assert( usRcvBufferPos < MB_SER_PDU_SIZE_MAX );
-
-    /* Length and CRC check */
+    for(UCHAR i=0; i< usRcvBufferPos;i++)
+    {
+        printf("%2x ",ucRTUBuf[i]);
+    }
+    printf("\r\n");
+        /* Length and CRC check */
     if( ( usRcvBufferPos >= MB_SER_PDU_SIZE_MIN )
         && ( usMBCRC16( ( UCHAR * ) ucRTUBuf, usRcvBufferPos ) == 0 ) )
     {
@@ -323,7 +327,7 @@ BOOL
 xMBRTUTimerT35Expired( void )
 {
     BOOL            xNeedPoll = FALSE;
-    printf("time out!\r\n");
+   // printf("time out!\r\n");
     switch ( eRcvState )
     {
         /* Timer t35 expired. Startup phase is finished. */

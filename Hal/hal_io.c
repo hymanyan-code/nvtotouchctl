@@ -3,8 +3,8 @@
 #include "hal_beep.h"
 #include "hal_timer.h"
 #include "stdio.h"
-volatile uint8_t g_input_state;
-volatile uint8_t g_output_state;
+volatile uint8_t g_input_state = 0;
+volatile uint8_t g_output_state =0;
 
 
 
@@ -115,7 +115,7 @@ void hal_output_set(unsigned char port, unsigned char state)
     }
 }
 
-void hal_handle_input_1ms_loop(void)
+void hal_handle_input_10ms_loop(void)
 {
     static uint8_t filter_cnt[8] = {0};
     static uint8_t bit_state;
@@ -133,35 +133,35 @@ void hal_handle_input_1ms_loop(void)
         }
         else
         {
-            filter_cnt[i]++;
+            //filter_cnt[i]++;
         }  
 
-        if(filter_cnt[i] >=10 && trigger_flag[i]==1)  //10ms
+        if(trigger_flag[i]==1 && filter_cnt[i] ++>5)  //50ms
         {
             trigger_flag[i] = 0;
-            if(bit_state & (1 << i))
+            if(bit_state & (1 << i))    
             {
-								hal_beep_on();
-	              hal_CreatTimer(T_BEEP,hal_beep_off, 40000, T_STA_START); //2 seconds
-                printf("input %d is on\r\n", i);
+				//hal_beep_on();
+	            //hal_CreatTimer(T_BEEP,hal_beep_off, 20000, T_STA_START); //2 seconds
+                printf("input %d is on\r\n", i+1);
                 g_input_state |= (1 << i);
-                g_output_state |= (1 << i);
+                //g_output_state |= (1 << i);
             }
             else
             {
-                printf("input %d is off\r\n", i);
+                printf("input %d is off\r\n", i+1);
                 g_input_state &= ~(1 << i);
-                g_output_state &= ~(1 << i);
+               // g_output_state &= ~(1 << i);
             }
         }
 
     }
 
     bit_state_previou = bit_state;
-    hal_ResetTimer(T_INPUT, T_STA_START);
+  
 }
 
-void hal_handle_output_1ms_loop(void)
+void hal_handle_output_10ms_loop(void)
 {
     static uint8_t bit_state;
     static uint8_t bit_state_previou;
@@ -173,15 +173,17 @@ void hal_handle_output_1ms_loop(void)
             if(bit_state & (1 << i))
             {
                 hal_output_set(i+1, 1);
+                printf("Output %d is on\r\n", i+1);
             }
             else
             {
                 hal_output_set(i+1, 0);
+                printf("Output %d is off\r\n", i+1);
             }
         }
     }
 
     bit_state_previou = bit_state;
-    hal_ResetTimer(T_OUTPUT, T_STA_START);
+    
 
 }

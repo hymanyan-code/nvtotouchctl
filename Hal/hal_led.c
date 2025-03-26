@@ -3,7 +3,7 @@
 #include <stdint.h>
 static void hal_LedConfig(void);
 static void hal_Led1Turn(void);
-
+uint8_t array[5]={0x01,0x33,0x44,0x55,0x10};
 void hal_LedInit(void)
 {
 	hal_LedConfig();

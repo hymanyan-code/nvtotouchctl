@@ -25,7 +25,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- */
+ */	
 
 /* ----------------------- System includes ----------------------------------*/
 #include "stdlib.h"
@@ -359,8 +359,10 @@ eMBPoll( void )
 
         case EV_FRAME_RECEIVED:
             eStatus = peMBFrameReceiveCur( &ucRcvAddress, &ucMBFrame, &usLength );
+           // printf("eStatus:%d\r\n",eStatus);
             if( eStatus == MB_ENOERR )
             {
+                
                 /* Check if the frame is for us. If not ignore the frame. */
                 if( ( ucRcvAddress == ucMBAddress ) || ( ucRcvAddress == MB_ADDRESS_BROADCAST ) )
                 {
