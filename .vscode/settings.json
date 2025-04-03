@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "string.h": "c",
-        "hal_beep.h": "c"
+        "hal_beep.h": "c",
+        "hal_io.h": "c",
+        "hal_stepper.h": "c"
     }
 }

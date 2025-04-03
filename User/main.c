@@ -1,3 +1,4 @@
+
 #include <stdint.h>
 #include "M0518.h"
 #include <stdio.h>
@@ -39,14 +40,20 @@ void SYS_Init(void)
     CLK_EnableModuleClock(TMR1_MODULE);
     CLK_EnableModuleClock(ADC_MODULE);
 
+    CLK_EnableModuleClock(BPWM1_MODULE);
+
+
     /* Select UART module clock source */
     CLK_SetModuleClock(UART1_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
     CLK_SetModuleClock(UART4_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
 
     CLK_SetModuleClock(TMR1_MODULE, CLK_CLKSEL1_TMR1_S_HCLK, 0);
-    CLK_SetModuleClock(ADC_MODULE, CLK_CLKSEL1_ADC_S_HCLK, CLK_CLKDIV_ADC(10));  //5Mhz
+    CLK_SetModuleClock(ADC_MODULE, CLK_CLKSEL1_ADC_S_HCLK, CLK_CLKDIV_ADC(50));  //5Mhz
+
+    CLK_SetModuleClock(BPWM1_MODULE, CLK_CLKSEL3_BPWM1_S_PLL, 0);
 
 
+    SYS_ResetModule(BPWM1_RST);
     /*---------------------------------------------------------------------------------------------------------*/
     /* Init I/O Multi-function                                                                                 */
     /*---------------------------------------------------------------------------------------------------------*/
@@ -60,11 +67,23 @@ void SYS_Init(void)
     SYS->GPC_MFP &= ~(SYS_GPC_MFP_PC7_Msk|SYS_GPC_MFP_PC6_Msk);
     SYS->GPC_MFP |= (SYS_GPC_MFP_PC7_UART4_RXD | SYS_GPC_MFP_PC6_UART4_TXD);
 
-    /* Disable the GPA5 - GPA6 digital input path to avoid the leakage current. */
+    /* Disable the GPA5 - GPA6 digital input path to avoid the leakage current. ADC5 ADC6 config*/
     GPIO_DISABLE_DIGITAL_PATH(PA, 0x60);
 
     SYS->GPA_MFP &= ~(SYS_GPA_MFP_PA5_Msk|SYS_GPA_MFP_PA6_Msk);
     SYS->GPA_MFP |= (SYS_GPA_MFP_PA5_ADC5 | SYS_GPA_MFP_PA6_ADC6);
+
+
+     /* Set GPC multi-function pins for BPWM1 Channel 2 */
+
+     SYS->GPB_MFP = (SYS->GPB_MFP & (~SYS_GPB_MFP_PB8_Msk));
+     SYS->GPB_MFP |= SYS_GPB_MFP_PB8_BPWM1_CH2;
+
+     SYS->ALT_MFP3 &= ~(SYS_ALT_MFP3_PB8_Msk);
+     SYS->ALT_MFP3 |= SYS_ALT_MFP3_PB8_BPWM1_CH2;
+
+
+
 }
 
 

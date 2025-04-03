@@ -154,11 +154,11 @@ eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
 
     ENTER_CRITICAL_SECTION(  );
     assert( usRcvBufferPos < MB_SER_PDU_SIZE_MAX );
-    for(UCHAR i=0; i< usRcvBufferPos;i++)
-    {
-        printf("%2x ",ucRTUBuf[i]);
-    }
-    printf("\r\n");
+    // for(UCHAR i=0; i< usRcvBufferPos;i++)
+    // {
+    //     printf("%2x ",ucRTUBuf[i]);
+    // }
+    // printf("\r\n");
         /* Length and CRC check */
     if( ( usRcvBufferPos >= MB_SER_PDU_SIZE_MIN )
         && ( usMBCRC16( ( UCHAR * ) ucRTUBuf, usRcvBufferPos ) == 0 ) )

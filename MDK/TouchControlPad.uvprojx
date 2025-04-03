@@ -560,6 +560,11 @@
               <FileType>1</FileType>
               <FilePath>..\Hal\hal_adc.c</FilePath>
             </File>
+            <File>
+              <FileName>hal_stepper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_stepper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
