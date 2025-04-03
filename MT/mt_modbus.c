@@ -6,6 +6,7 @@
 #include "stdio.h"
 #include "hal_adc.h"
 #include "hal_stepper.h"
+#include "hal_dac.h"
 #include <math.h>
 #define SW_VERSION    (0X0001)
 
@@ -20,9 +21,15 @@
 #define REG_HONGING_TEMP_COEF_K      (5)
 #define REG_HONGING_TEMP_COEF_B      (6)
 #define REG_HONGING_TEMP_RES         (7)  
-#define REG_HONGING_TEMP             (9)  
-#define REG_HONGING_STEP_CTL        (11)
-#define REG_HONGING_STEP_SPEED      (12)
+#define REG_HONGING_TEMP             (8)  
+#define REG_HONGING_STEP_CTL        (9)
+#define REG_HONGING_STEP_SPEED      (10)
+
+#define REG_HONGING_DAC1          (12)
+#define REG_HONGING_DAC2          (13)
+
+
+
 
 #define REG_HOLDING_NREGS            (14)
 
@@ -64,6 +71,15 @@ void HalAdc1Callback(uint16_t data)
 }
 
 
+//温度系数k和b的设置
+//k乘10000，b乘1000
+
+
+//电阻值单位欧姆/100
+//温度单位摄氏度/10
+//数字转模拟电压单位mV
+
+
 
 
 void ModbusRegistersInit(void)
@@ -84,7 +100,6 @@ void MtModbusInit(void)
 
 static void UpdateHoldingRegs(USHORT index)
 {
-    uint32_t ultemp_data;
     if(index == REG_HONGING_IO)
     {
         usRegHoldingBuf[REG_HONGING_IO]=((USHORT)g_input_state<<8 )| (g_output_state);
@@ -107,18 +122,18 @@ static void UpdateHoldingRegs(USHORT index)
         usRegHoldingBuf[REG_HONGING_TEMP_COEF_B] = pt100_coef_b;
         
     }
-    else if(index == REG_HONGING_TEMP_RES||index == (REG_HONGING_TEMP_RES+1))
+    else if(index == REG_HONGING_TEMP_RES)
     {
-        ultemp_data = floatToUint(pt100_res);
-        usRegHoldingBuf[REG_HONGING_TEMP_RES] = (ultemp_data>>16);
-        usRegHoldingBuf[REG_HONGING_TEMP_RES+1] = ultemp_data;
+        //ultemp_data = floatToUint(pt100_res);
+        usRegHoldingBuf[REG_HONGING_TEMP_RES] = (uint16_t)(pt100_res*100);
+
     }
-    else if(index == REG_HONGING_TEMP|| index == (REG_HONGING_TEMP+1))
+    else if(index == REG_HONGING_TEMP)
     {
-        ultemp_data = floatToUint(pt100_temp);
+       // ultemp_data = floatToUint(pt100_temp);
         //printf("TEMP:%d\r\n",ultemp_data);
-        usRegHoldingBuf[REG_HONGING_TEMP] = (ultemp_data>>16);
-        usRegHoldingBuf[REG_HONGING_TEMP+1] = ultemp_data;
+        usRegHoldingBuf[REG_HONGING_TEMP] = (uint16_t)(pt100_temp*10);
+
     }
     else if(index == REG_HONGING_STEP_CTL)
     {
@@ -128,6 +143,14 @@ static void UpdateHoldingRegs(USHORT index)
     {
         usRegHoldingBuf[REG_HONGING_STEP_SPEED] =  (uint16_t)(HalGetStepperSpeed()>>16);
         usRegHoldingBuf[REG_HONGING_STEP_SPEED+1] = (uint16_t)HalGetStepperSpeed();
+    }
+    else if (index == REG_HONGING_DAC1)
+    {
+        usRegHoldingBuf[REG_HONGING_DAC1] = (uint16_t)(dac_voltage[0]);
+    }
+    else if (index == REG_HONGING_DAC2)
+    {
+        usRegHoldingBuf[REG_HONGING_DAC2] = (uint16_t)(dac_voltage[1]);
     }
 
 }
@@ -171,6 +194,16 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
     {
         u32value |= (uint32_t)value;
         HalSetStepperSpeed(u32value);
+    }
+    else if(index == REG_HONGING_DAC1)
+    {
+        dac_voltage[0] = (uint16_t)value;
+        HalDac1SetVoltage((float)value/1000);
+    }
+    else if(index == REG_HONGING_DAC2)
+    {
+        dac_voltage[1] = (uint16_t)value;
+        HalDac2SetVoltage((float)value/1000);
     }
     else
     {

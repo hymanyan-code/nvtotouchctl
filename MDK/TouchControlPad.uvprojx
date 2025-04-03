@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Core;..\System;..\StdDriver\inc;..\OS;..\Hal;..\Modbus\port;..\Modbus\modbus\include;..\Modbus\modbus\rtu;..\MT</IncludePath>
+              <IncludePath>..\Core;..\System;..\StdDriver\inc;..\OS;..\Hal;..\Modbus\port;..\Modbus\modbus\include;..\Modbus\modbus\rtu;..\MT;..\Driver;..\Device;..\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -429,6 +429,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\user_misc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -565,6 +570,11 @@
               <FileType>1</FileType>
               <FilePath>..\Hal\hal_stepper.c</FilePath>
             </File>
+            <File>
+              <FileName>hal_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\hal_dac.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -624,6 +634,26 @@
               <FileName>mt_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MT\mt_task.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DRIVER</GroupName>
+          <Files>
+            <File>
+              <FileName>driver_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\driver_i2c.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DEVICE</GroupName>
+          <Files>
+            <File>
+              <FileName>dev_dac5571.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Device\dev_dac5571.c</FilePath>
             </File>
           </Files>
         </Group>

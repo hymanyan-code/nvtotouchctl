@@ -12,7 +12,7 @@ typedef enum
     ADC_CH1,
     ADC_CH2,
     ADC_CH_MAX
-}ACD_CHANNEL;
+} ACD_CHANNEL;
 
 typedef void (*AdcDataPro_Callback_t)(uint16_t data);
 

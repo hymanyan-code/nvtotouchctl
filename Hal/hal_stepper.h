@@ -32,12 +32,12 @@ uint8_t HalStepperGetStepState(void);
 uint8_t HalStepperGetDir(void);
 
 
-typedef struct 
+typedef struct
 {
     uint8_t state;
     uint8_t dir;
     uint32_t speed;
-}HalStepper;
+} HalStepper;
 
 
 
