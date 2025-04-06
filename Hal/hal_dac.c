@@ -4,7 +4,7 @@
 #include "user_misc.h"
 #include "stdio.h"
 
-uint16_t dac_voltage[2];
+
 
 uint8_t HalDacInit(void)
 {

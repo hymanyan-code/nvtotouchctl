@@ -158,7 +158,7 @@ eMBRTUReceive( UCHAR * pucRcvAddress, UCHAR ** pucFrame, USHORT * pusLength )
     // {
     //     printf("%2x ",ucRTUBuf[i]);
     // }
-    // printf("\r\n");
+    //printf("pos%d\r\n",usRcvBufferPos);
         /* Length and CRC check */
     if( ( usRcvBufferPos >= MB_SER_PDU_SIZE_MIN )
         && ( usMBCRC16( ( UCHAR * ) ucRTUBuf, usRcvBufferPos ) == 0 ) )

@@ -36,6 +36,7 @@
 #define MB_SLAVE_ADRESS 0x31
 USHORT usRegHoldingBuf[REG_HOLDING_NREGS];
 
+volatile uint16_t dac_voltage[2]={0};
 
 uint32_t floatToUint(float floatValue)
 {
@@ -90,7 +91,7 @@ void ModbusRegistersInit(void)
 
 void MtModbusInit(void)
 {
-    ( void )eMBInit( MB_RTU, MB_SLAVE_ADRESS, 4 , 115200, MB_PAR_NONE );  
+    ( void )eMBInit( MB_RTU, MB_SLAVE_ADRESS, 4 , 19200, MB_PAR_NONE );  
 
     ModbusRegistersInit();
 
@@ -139,19 +140,23 @@ static void UpdateHoldingRegs(USHORT index)
     {
         usRegHoldingBuf[REG_HONGING_STEP_CTL] = (uint16_t)HalStepperGetStepState()<<8 | HalStepperGetDir();  
     }
-    else if(index == REG_HONGING_STEP_SPEED|REG_HONGING_STEP_SPEED +1)
+    else if(index == REG_HONGING_STEP_SPEED|| index == REG_HONGING_STEP_SPEED +1)
     {
         usRegHoldingBuf[REG_HONGING_STEP_SPEED] =  (uint16_t)(HalGetStepperSpeed()>>16);
         usRegHoldingBuf[REG_HONGING_STEP_SPEED+1] = (uint16_t)HalGetStepperSpeed();
     }
     else if (index == REG_HONGING_DAC1)
     {
-        usRegHoldingBuf[REG_HONGING_DAC1] = (uint16_t)(dac_voltage[0]);
+        
+        usRegHoldingBuf[REG_HONGING_DAC1] = dac_voltage[0];
+        //printf("update reg12:%d\r\n",usRegHoldingBuf[REG_HONGING_DAC1]);
     }
     else if (index == REG_HONGING_DAC2)
     {
-        usRegHoldingBuf[REG_HONGING_DAC2] = (uint16_t)(dac_voltage[1]);
+        usRegHoldingBuf[REG_HONGING_DAC2] = dac_voltage[1];
+        //printf("update reg13:%d\r\n",usRegHoldingBuf[REG_HONGING_DAC2]);
     }
+    //printf("index__%d\r\n",index);
 
 }
 
@@ -179,10 +184,12 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
         if(value&0xFF00)
         {
             HalStepperStart();
+            printf("pwm start!\r\n");
         }
         else
         {
             HalStepperStop();
+             printf("pwm stop!\r\n");
         }
         HalStepperSetDir((uint8_t)(value&0x00FF));
     }
@@ -193,17 +200,28 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
     else if(index == REG_HONGING_STEP_SPEED+1)
     {
         u32value |= (uint32_t)value;
-        HalSetStepperSpeed(u32value);
+        if(u32value>=50&&u32value<=200000)
+        {
+            HalSetStepperSpeed(u32value);
+            u32value=0;
+        }
+        else
+        {
+            eStatus = MB_EINVAL;
+        }
+        
     }
     else if(index == REG_HONGING_DAC1)
     {
         dac_voltage[0] = (uint16_t)value;
-        HalDac1SetVoltage((float)value/1000);
+        printf("dac1 voltage:[%d][%d]\r\n",value,dac_voltage[0]);
+        HalDac1SetVoltage((float)value/1000/2);
     }
     else if(index == REG_HONGING_DAC2)
     {
         dac_voltage[1] = (uint16_t)value;
-        HalDac2SetVoltage((float)value/1000);
+        printf("dac2 voltage:[%d][%d]\r\n",value,dac_voltage[1]);
+        HalDac2SetVoltage((float)value/1000/2);
     }
     else
     {

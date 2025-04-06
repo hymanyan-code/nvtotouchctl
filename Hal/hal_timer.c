@@ -7,7 +7,7 @@ volatile Stu_TimerTypedef Stu_Timer[T_SUM];
 
 /*******************************************************************************
 * Function Name  : static void hal_timer4Config(void)
-* Description    : ¶¨Ê±Æ÷Ó²¼þÅäÖÃº¯Êý
+* Description    : ï¿½ï¿½Ê±ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½
 * Input          : None
 * Output         : None
 * Return         : None
@@ -17,7 +17,7 @@ static void hal_timer1Config(void)
 {
 
     /* Open Timer1 in periodic mode, enable interrupt and 2 interrupt ticks per second */
-    TIMER_Open(TIMER1, TIMER_PERIODIC_MODE, 200000); //50us cycle
+    TIMER_Open(TIMER1, TIMER_PERIODIC_MODE, 20000); //50us cycle
     TIMER_EnableInt(TIMER1);
 
     NVIC_EnableIRQ(TMR1_IRQn);
@@ -29,7 +29,7 @@ static void hal_timer1Config(void)
 
 /*******************************************************************************
 * Function Name  : void hal_timerInit(void)
-* Description    : ¶¨Ê±Æ÷³õÊ¼»¯
+* Description    : ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
 * Input          : None
 * Output         : None
 * Return         : None
@@ -55,11 +55,11 @@ void hal_MatrixtimerInit(void)
 
 /*******************************************************************************
 * Function Name  : hal_CreatTimer(TIMER_ID_TYPEDEF id,void (*proc)(void), unsigned short Period,unsigned char state)
-* Description    : ´´½¨¶¨Ê±Æ÷
-* Input          : - id£º¶¨Ê±Æ÷ID
-*									- (*proc)() º¯ÊýÖ¸Õë
-*									- Period ¶¨Ê±ÖÜÆÚ£¬µ¥Î»50us
-* 								- state ¶¨Ê±Æ÷³õÊ¼×´Ì¬
+* Description    : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+* Input          : - idï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ID
+*									- (*proc)() ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+*									- Period ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Î»50us
+* 								- state ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê¼×´Ì¬
 * Output         : None
 * Return         : None
 * Attention		 	 : None
@@ -77,16 +77,16 @@ void hal_CreatTimer(TIMER_ID_TYPEDEF id, void (*proc)(void), unsigned short Peri
 
 /*******************************************************************************
 * Function Name  : unsigned char hal_CtrlTimerAction(TIMER_ID_TYPEDEF id,TIMER_STATE_TYPEDEF sta)
-* Description    : ¿ØÖÆ¶¨Ê±Æ÷¶¯×÷
-* Input          : - id£º¶¨Ê±Æ÷ID
-*								 	 - sta ¶¨Ê±Æ÷×´Ì¬
+* Description    : ï¿½ï¿½ï¿½Æ¶ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Input          : - idï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ID
+*								 	 - sta ï¿½ï¿½Ê±ï¿½ï¿½×´Ì¬
 * Output         : None
 * Return         : None
 * Attention		 	 : None
 *******************************************************************************/
 TIMER_RESULT_TYPEDEF hal_CtrlTimerAction(TIMER_ID_TYPEDEF id, TIMER_STATE_TYPEDEF sta)
 {
-    if (Stu_Timer[id].func)		//ÅÐ¶Ï¶¨Ê±Æ÷ÊÇ·ñ´æÔÚ
+    if (Stu_Timer[id].func)		//ï¿½Ð¶Ï¶ï¿½Ê±ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
     {
         Stu_Timer[id].state = sta;
         return T_SUCCESS;
@@ -99,16 +99,16 @@ TIMER_RESULT_TYPEDEF hal_CtrlTimerAction(TIMER_ID_TYPEDEF id, TIMER_STATE_TYPEDE
 
 /*******************************************************************************
 * Function Name  : TIMER_STATE_RESULT_TYPEDEF	hal_GetTimerState(TIMER_ID_TYPEDEF id)
-* Description    : »ñÈ¡¶¨Ê±Æ÷×´Ì¬
-* Input          : - id£º¶¨Ê±Æ÷ID
-*								 	 - sta ¶¨Ê±Æ÷×´Ì¬
+* Description    : ï¿½ï¿½È¡ï¿½ï¿½Ê±ï¿½ï¿½×´Ì¬
+* Input          : - idï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ID
+*								 	 - sta ï¿½ï¿½Ê±ï¿½ï¿½×´Ì¬
 * Output         : None
 * Return         : None
 * Attention		 	 : None
 *******************************************************************************/
 TIMER_STATE_TYPEDEF	hal_GetTimerState(TIMER_ID_TYPEDEF id)
 {
-    if (Stu_Timer[id].func)		//ÅÐ¶Ï¶¨Ê±Æ÷ÊÇ·ñ´æÔÚ
+    if (Stu_Timer[id].func)		//ï¿½Ð¶Ï¶ï¿½Ê±ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
     {
         return Stu_Timer[id].state;
 
@@ -122,8 +122,8 @@ TIMER_STATE_TYPEDEF	hal_GetTimerState(TIMER_ID_TYPEDEF id)
 
 /*******************************************************************************
 * Function Name  : hal_DeleteTimer(TIMER_ID_TYPEDEF id)
-* Description    : É¾³ý¶¨Ê±Æ÷
-* Input          : - id£º¶¨Ê±Æ÷ID
+* Description    : É¾ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+* Input          : - idï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ID
 *
 * Output         : None
 * Return         : None
@@ -148,16 +148,16 @@ TIMER_RESULT_TYPEDEF hal_DeleteTimer(TIMER_ID_TYPEDEF id)
 
 /*******************************************************************************
 * Function Name  : hal_ResetTimer(TIMER_ID_TYPEDEF id,TIMER_STATE_TYPEDEF sta)
-* Description    : ¸´Î»¶¨Ê±Æ÷×´Ì¬ºÍ¼ÆÊ±Ê±¼ä
-* Input          : - id£º¶¨Ê±Æ÷ID
-*								 	 - sta ¶¨Ê±Æ÷×´Ì¬
+* Description    : ï¿½ï¿½Î»ï¿½ï¿½Ê±ï¿½ï¿½×´Ì¬ï¿½Í¼ï¿½Ê±Ê±ï¿½ï¿½
+* Input          : - idï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ID
+*								 	 - sta ï¿½ï¿½Ê±ï¿½ï¿½×´Ì¬
 * Output         : None
 * Return         : None
 * Attention		 	 : None
 *******************************************************************************/
 TIMER_RESULT_TYPEDEF hal_ResetTimer(TIMER_ID_TYPEDEF id, TIMER_STATE_TYPEDEF sta)
 {
-    if (Stu_Timer[id].func)		//ÅÐ¶Ï¶¨Ê±Æ÷ÊÇ·ñ´æÔÚ
+    if (Stu_Timer[id].func)		//ï¿½Ð¶Ï¶ï¿½Ê±ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
     {
         Stu_Timer[id].state = sta;
         Stu_Timer[id].CurrentCount = 0;
@@ -172,7 +172,7 @@ TIMER_RESULT_TYPEDEF hal_ResetTimer(TIMER_ID_TYPEDEF id, TIMER_STATE_TYPEDEF sta
 
 /*******************************************************************************
 * Function Name  : static void Hal_TimerHandle(void)
-* Description    : ¶¨Ê±Æ÷ÖÐ¶Ï¼ÆÊ±º¯Êý
+* Description    : ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¶Ï¼ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
 * Input          : None
 * Output         : None
 * Return         : None
@@ -199,7 +199,7 @@ static void Hal_TimerHandle(void)
 
 /*******************************************************************************
 * Function Name  : void TIM4_IRQHandler(void)
-* Description    : ¶¨Ê±Æ÷ÖÐ¶Ï»Øµ÷º¯Êý
+* Description    : ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¶Ï»Øµï¿½ï¿½ï¿½ï¿½ï¿½
 * Input          : None
 * Output         : None
 * Return         : None

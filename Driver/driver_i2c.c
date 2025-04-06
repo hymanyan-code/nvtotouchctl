@@ -120,14 +120,32 @@ void DriverI2C_SendByte(SoftIIC iic, uint8_t Byte)
 		{
 			DriverI2C_SDA_LOW(iic);
 		}
+		Delayus(2);
 		DriverI2C_SCL_HIGH(iic);
 		Delayus(5);
 		DriverI2C_SCL_LOW(iic);
-		Delayus(5);
+		Delayus(3);
 	}
 }
 
+uint8_t DriverI2C_ReceiveByte(SoftIIC iic)
+{
+	uint8_t i, Byte = 0x00;
+	DriverI2C_SDA_HIGH(iic);
+	Delayus(5);
+	for (i = 0; i < 8; i ++)
+	{
+		DriverI2C_SCL_HIGH(iic);
+		Delayus(5);
+		if (DriverI2C_SDA_READ(iic) == 1){Byte |= (0x80 >> i);}
+		DriverI2C_SCL_LOW(iic);
+		Delayus(5);
+	}
+	return Byte;
 
+
+
+}
 void DriverI2C_SendAck(SoftIIC iic, uint8_t AckBit)
 {
 	if (AckBit == 0)
@@ -138,6 +156,7 @@ void DriverI2C_SendAck(SoftIIC iic, uint8_t AckBit)
 	{
 		DriverI2C_SDA_HIGH(iic);
 	}
+	Delayus(1);
 	DriverI2C_SCL_HIGH(iic);
 	Delayus(5);
 	DriverI2C_SCL_LOW(iic);

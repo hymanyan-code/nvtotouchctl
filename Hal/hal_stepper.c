@@ -1,20 +1,23 @@
 #include "M0518.h"
 #include "hal_stepper.h"
 #include <stdint.h>
-uint32_t stepper_speed = 0;
 
 
-HalStepper stepper = {0, 0, 0};
+
+HalStepper stepper = {0, 0, 30000};
 
 void HalStepperInit(void)
 {
     GPIO_SetMode(DIR_PORT, DIR_PIN, GPIO_PMD_OUTPUT);
     DIR_PORT_PIN = 0;
 
-    BPWM_ConfigOutputChannel(BPWM1, 2, 30000, 50);
+    
 
     // Enable output of BPWM0 channel 0
-    BPWM_EnableOutput(BPWM1, BPWM_CH_2_MASK);
+    //BPWM_EnableOutput(BPWM1, BPWM_CH_2_MASK);
+    //BPWM_Start(BPWM1, BPWM_CH_2_MASK);
+    BPWM_ConfigOutputChannel(BPWM1, 2, 30000, 20);
+    //BPWM_Start(BPWM1, BPWM_CH_2_MASK);
 
 }
 
@@ -35,19 +38,22 @@ void HalStepperSetDir(uint8_t dir)
 
 void HalStepperStart(void)
 {
+    BPWM_ConfigOutputChannel(BPWM1, 2,  stepper.speed, 20);
+    BPWM_EnableOutput(BPWM1, BPWM_CH_2_MASK);
     BPWM_Start(BPWM1, BPWM_CH_2_MASK);
     stepper.state = 1;
 }
 
 void HalStepperStop(void)
 {
+    BPWM_DisableOutput(BPWM1, BPWM_CH_2_MASK);
     BPWM_Stop(BPWM1, BPWM_CH_2_MASK);
     stepper.state = 0;
 }
 
 void HalSetStepperSpeed(uint32_t speed)
 {
-    BPWM_ConfigOutputChannel(BPWM1, 2, speed, 50);
+    BPWM_ConfigOutputChannel(BPWM1, 2, speed, 20);
     stepper.speed = speed;
 }
 

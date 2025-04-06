@@ -45,12 +45,12 @@ void SYS_Init(void)
 
     /* Select UART module clock source */
     CLK_SetModuleClock(UART1_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
-    CLK_SetModuleClock(UART4_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
+    CLK_SetModuleClock(UART4_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(5));
 
     CLK_SetModuleClock(TMR1_MODULE, CLK_CLKSEL1_TMR1_S_HCLK, 0);
     CLK_SetModuleClock(ADC_MODULE, CLK_CLKSEL1_ADC_S_HCLK, CLK_CLKDIV_ADC(50));  //5Mhz
 
-    CLK_SetModuleClock(BPWM1_MODULE, CLK_CLKSEL3_BPWM1_S_PLL, 0);
+    CLK_SetModuleClock(BPWM1_MODULE, CLK_CLKSEL3_BPWM1_S_PCLK, 0);
 
 
     SYS_ResetModule(BPWM1_RST);
@@ -76,14 +76,15 @@ void SYS_Init(void)
 
      /* Set GPC multi-function pins for BPWM1 Channel 2 */
 
-     SYS->GPB_MFP = (SYS->GPB_MFP & (~SYS_GPB_MFP_PB8_Msk));
+     //SYS->GPB_MFP = (SYS->GPB_MFP & (~SYS_GPB_MFP_PB8_Msk));
+      SYS->GPB_MFP &= (~SYS_GPB_MFP_PB8_Msk);
      SYS->GPB_MFP |= SYS_GPB_MFP_PB8_BPWM1_CH2;
 
      SYS->ALT_MFP3 &= ~(SYS_ALT_MFP3_PB8_Msk);
      SYS->ALT_MFP3 |= SYS_ALT_MFP3_PB8_BPWM1_CH2;
 
 
-
+    SYS->ALT_MFP &= ~(SYS_ALT_MFP_PB8_Msk);
 }
 
 
@@ -157,6 +158,7 @@ int main(void)
 	OS_TaskInit();
 
     printf("\n\nCPU @ %d Hz \n", SystemCoreClock);
+    printf("PLL @ %d Hz \n", CLK_GetPLLClockFreq());
     printf("OS Initialized!!!!\n");
    // GPIO_SetMode(PD, BIT6, GPIO_PMD_OUTPUT);    //beep
    // PD6 = 0;

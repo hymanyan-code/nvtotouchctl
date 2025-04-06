@@ -39,6 +39,7 @@
 BOOL
 xMBPortTimersInit( USHORT usTim1Timeout50us )
 {
+    printf("MB time init:%d\r\n",usTim1Timeout50us);
     hal_CreatTimer(T_MODBUS,pxMBPortCBTimerExpired,usTim1Timeout50us,T_STA_STOP);
     return TRUE;
 }

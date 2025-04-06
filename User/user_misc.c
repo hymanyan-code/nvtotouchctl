@@ -12,7 +12,7 @@ void Delayms(uint32_t ms) {
 
 void Delayus(uint32_t us) {
     for (; us > 0; us--) {
-        for (volatile uint32_t j = 12; j > 0; j--);    // 12 * 4 = 48周期（近似50周期）
+        for (volatile uint32_t j = 3; j > 0; j--);    // 12 * 4 = 48周期（近似50周期）
     }
 
 }

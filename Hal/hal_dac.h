@@ -30,7 +30,7 @@ uint8_t HalDac2SetVoltage(float vol);
 
 
 
-extern uint16_t dac_voltage[2];
+
 
 
 

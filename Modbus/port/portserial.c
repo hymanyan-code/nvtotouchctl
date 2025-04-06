@@ -95,8 +95,8 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
         SYS_ResetModule(UART4_RST);
 
         /* Configure UART0 and set UART0 Baudrate */
-        UART_Open(UART4, 115200);
-         //UART_SetLine_Config(UART4, ulBaudRate, UART_WORD_LEN_8,  u32parity,  UART_STOP_BIT_1);
+        UART_Open(UART4, 19200);
+         UART_SetLine_Config(UART4, 19200, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
       // NVIC_EnableIRQ(UART4_IRQn);
       //UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
         NVIC_EnableIRQ(UART4_IRQn);
@@ -114,6 +114,7 @@ BOOL
 xMBPortSerialPutByte( CHAR ucByte )
 {
     UART_Write(UART4,(uint8_t*)(&ucByte),1);
+    //printf("%02x\r\n",ucByte);
     return TRUE;
 }
 
@@ -122,7 +123,7 @@ xMBPortSerialGetByte( CHAR * pucByte )
 {
     //*pucByte = UART_READ(UART4);
     UART_Read(UART4,(uint8_t*)pucByte,1);
-   // printf("%02x\r\n",*pucByte);
+    //printf("%02x\r\n",*pucByte);
     return TRUE;
 }
 
