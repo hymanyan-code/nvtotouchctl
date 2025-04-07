@@ -49,29 +49,58 @@ uint32_t floatToUint(float floatValue)
 #define B -5.775e-7
 #define R_MIN 18.52  // -200℃
 #define R_MAX 390.48 // 850℃
-float calculate_temperature(float Rt) {
+float calculate_temperature(float Rt)
+{
     if (Rt < R_MIN || Rt > R_MAX) {
         printf("Error: Resistance out of range!\n");
-        return -999;  // 返回错误标志值
+        return -999.0f;  // 返回错误标志值
     }
     float temp;
-    temp = (-A + sqrt(A * A - 4 * B * (1 - Rt / R0))) / (2 * B);
-   // printf("%f\r\n",temp);
+    if(Rt >= R0)
+    {
+        temp = (-A + sqrt(A * A - 4 * B * (1 - Rt / R0))) / (2 * B);
+    }
+    else
+    {
+        temp = -999.0f;
+    }
+    //printf("%f\r\n",temp);
     return temp;
 }
 
 int16_t pt100_coef_k = 10000;
-int16_t pt100_coef_b = -3000;
+int16_t pt100_coef_b = 0;
 float pt100_res;
-float pt100_temp;;
+float pt100_temp;
 void HalAdc1Callback(uint16_t data)
 {
    // pt100_res = data*40.63/4095*5*pt100_coef_k/10000-pt100_coef_b/1000;
-    pt100_res = (float)data * 40.7986/4095 * 5 * pt100_coef_k / 10000 + pt100_coef_b / 1000;
+    pt100_res = (float)data * 293 / 6000 * pt100_coef_k/ 10000 + pt100_coef_b / 1000 + 502/375;
     pt100_temp = calculate_temperature(pt100_res);
 }
 
+/*
+>> pkg load symbolic
+>> syms x y
+>> % 将将小小数数转转换换为为分分数数形形式式（（避避免免警警告告））
+>> eq1 = 2176*x + y == sym('107.6');
+>> eq2 = 2296*x + y == sym('113.46');
+>> [sol_x, sol_y] = solve([eq1, eq2], [x, y])
+sol_x = (sym)
 
+  293
+  ----
+  6000
+0.0488333
+sol_y = (sym)
+
+  502
+  ---
+  375
+1.33867
+1000x=48.8333
+1000y=1338.67
+*/
 //温度系数k和b的设置
 //k乘10000，b乘1000
 

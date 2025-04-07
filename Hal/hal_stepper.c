@@ -4,7 +4,7 @@
 
 
 
-HalStepper stepper = {0, 0, 30000};
+HalStepper stepper = {0, 0, 200};
 
 void HalStepperInit(void)
 {
@@ -16,7 +16,7 @@ void HalStepperInit(void)
     // Enable output of BPWM0 channel 0
     //BPWM_EnableOutput(BPWM1, BPWM_CH_2_MASK);
     //BPWM_Start(BPWM1, BPWM_CH_2_MASK);
-    BPWM_ConfigOutputChannel(BPWM1, 2, 30000, 20);
+    BPWM_ConfigOutputChannel(BPWM1, 2, 200, 20);
     //BPWM_Start(BPWM1, BPWM_CH_2_MASK);
 
 }

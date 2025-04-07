@@ -17,7 +17,7 @@ void hal_task_init(void)
     HalStepperInit();
 
     hal_beep_on();
-    hal_CreatTimer(T_BEEP, hal_beep_off, 40000, T_STA_START); //2 seconds
+    hal_CreatTimer(T_BEEP, hal_beep_off, 10000, T_STA_START); //2 seconds
 
 }
 

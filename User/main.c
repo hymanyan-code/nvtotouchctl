@@ -36,6 +36,7 @@ void SYS_Init(void)
     /* Enable UART module clock */
     CLK_EnableModuleClock(UART1_MODULE);
     CLK_EnableModuleClock(UART4_MODULE);
+    CLK_EnableModuleClock(UART5_MODULE);
 
     CLK_EnableModuleClock(TMR1_MODULE);
     CLK_EnableModuleClock(ADC_MODULE);
@@ -46,6 +47,7 @@ void SYS_Init(void)
     /* Select UART module clock source */
     CLK_SetModuleClock(UART1_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(1));
     CLK_SetModuleClock(UART4_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(5));
+    CLK_SetModuleClock(UART5_MODULE, CLK_CLKSEL1_UART_S_HXT, CLK_CLKDIV_UART(5));
 
     CLK_SetModuleClock(TMR1_MODULE, CLK_CLKSEL1_TMR1_S_HCLK, 0);
     CLK_SetModuleClock(ADC_MODULE, CLK_CLKSEL1_ADC_S_HCLK, CLK_CLKDIV_ADC(50));  //5Mhz
@@ -67,6 +69,15 @@ void SYS_Init(void)
     SYS->GPC_MFP &= ~(SYS_GPC_MFP_PC7_Msk|SYS_GPC_MFP_PC6_Msk);
     SYS->GPC_MFP |= (SYS_GPC_MFP_PC7_UART4_RXD | SYS_GPC_MFP_PC6_UART4_TXD);
 
+    //uart5 pa0 pa1
+    SYS->GPA_MFP &= ~(SYS_GPA_MFP_PA0_Msk|SYS_GPA_MFP_PA1_Msk);
+    SYS->GPA_MFP |= (SYS_GPA_MFP_PA0_UART5_TXD | SYS_GPA_MFP_PA1_UART5_RXD);
+
+    SYS->ALT_MFP4 &=~(SYS_ALT_MFP4_PA0_Msk|SYS_ALT_MFP4_PA1_Msk);
+    SYS->ALT_MFP4 |=(SYS_ALT_MFP4_PA1_UART5_RXD|SYS_ALT_MFP4_PA0_UART5_TXD);
+
+   SYS->ALT_MFP3 &=~(SYS_ALT_MFP3_PA0_Msk|SYS_ALT_MFP3_PA1_PWM0_CH5);
+  
     /* Disable the GPA5 - GPA6 digital input path to avoid the leakage current. ADC5 ADC6 config*/
     GPIO_DISABLE_DIGITAL_PATH(PA, 0x60);
 
@@ -118,18 +129,6 @@ static __INLINE uint32_t ADC_GetConversionRate()
 }
 
 
-
-void Delay(uint32_t ms)
-{
-    uint16_t j = 0;
-
-    for (; ms > 0; ms--)
-    {
-        for (j = 0xFFFF; j > 0 ; j--)
-        {
-        }
-    }
-}
 
 void DEBUG_UART1_Init(void)
 {

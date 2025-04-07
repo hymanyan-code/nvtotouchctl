@@ -43,30 +43,54 @@ UCHAR           ucCriticalNesting = 0x00;
 void
 vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 {
-   //ENTER_CRITICAL_SECTION(  );
+
     if( xRxEnable )
     {
-        //UART_EnableInt(UART4, (UART_IER_RDA_IEN_Msk ));
-       UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
-        //printf("enable rx\r\n");
+        if(0)
+        {
+            UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
+        }
+        else
+        {
+            UART_ENABLE_INT(UART5, (UART_IER_RDA_IEN_Msk ));
+        }
+
     }
     else
     {
-        UART_DISABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
-        //UART_DisableInt(UART4, (UART_IER_RDA_IEN_Msk ));
-       // printf("disable rx\r\n");
+        if(0)
+        {
+            UART_DISABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
+        }
+        else
+        {
+            UART_DISABLE_INT(UART5, UART_IER_RDA_IEN_Msk);
+        }
+
     }
     if( xTxEnable )
     {
-        UART_ENABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
-        //UART_EnableInt(UART4, ( UART_IER_THRE_IEN_Msk ));
+        if(0)
+        {
+            UART_ENABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
+        }
+        else
+        {
+            UART_ENABLE_INT(UART5, UART_IER_THRE_IEN_Msk);
+        }
     }
     else
     {
-        UART_DISABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
-       // UART_DisableInt(UART4, ( UART_IER_TOUT_IEN_Msk));
+        if(0)
+        {
+             UART_DISABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
+        }
+        else
+        {
+            UART_DISABLE_INT(UART5, UART_IER_THRE_IEN_Msk);
+        }
     }
-   //EXIT_CRITICAL_SECTION(  );
+
 }
 
 BOOL
@@ -91,19 +115,26 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
     if( bInitialized )
     {
         ENTER_CRITICAL_SECTION(  );
-         /* Reset UART0 module */
-        SYS_ResetModule(UART4_RST);
+        if(0)
+        {
+            SYS_ResetModule(UART4_RST);
 
-        /* Configure UART0 and set UART0 Baudrate */
-        UART_Open(UART4, 19200);
-         UART_SetLine_Config(UART4, 19200, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
-      // NVIC_EnableIRQ(UART4_IRQn);
-      //UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
-        NVIC_EnableIRQ(UART4_IRQn);
-       // UART4->FCR &= ~(UART_FCR_RFITL_Msk | UART_FCR_RTS_TRI_LEV_Msk);
+            UART_Open(UART4, 19200);
+            UART_SetLine_Config(UART4, 19200, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
 
-      //  UART4->FIFO =((UART4->FIFO&(~UART_FIFO_RFITL_MASK))|UART4_FIFO_RFITL_4BYTES);
-        //UART_EnableInt(UART0, (UART_IER_RDA_IEN_Msk | UART_IER_THRE_IEN_Msk ));
+            NVIC_EnableIRQ(UART4_IRQn);
+        }
+        else
+        {
+            SYS_ResetModule(UART5_RST);
+
+            UART_Open(UART5, 19200);
+            UART_SetLine_Config(UART5, 19200, UART_WORD_LEN_8,  UART_PARITY_NONE,  UART_STOP_BIT_1);
+
+            NVIC_EnableIRQ(UART5_IRQn);
+
+        }
+
         EXIT_CRITICAL_SECTION(  );
    
     }
@@ -113,17 +144,29 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
 BOOL
 xMBPortSerialPutByte( CHAR ucByte )
 {
-    UART_Write(UART4,(uint8_t*)(&ucByte),1);
-    //printf("%02x\r\n",ucByte);
+    if(0)
+    {
+        UART_Write(UART4,(uint8_t*)(&ucByte),1);
+    }
+    else
+    {
+        UART_Write(UART5,(uint8_t*)(&ucByte),1);
+    }
     return TRUE;
 }
 
 BOOL
 xMBPortSerialGetByte( CHAR * pucByte )
 {
-    //*pucByte = UART_READ(UART4);
-    UART_Read(UART4,(uint8_t*)pucByte,1);
-    //printf("%02x\r\n",*pucByte);
+    if(0)
+    {
+        UART_Read(UART4,(uint8_t*)pucByte,1);
+    }
+    else
+    {
+        UART_Read(UART5,(uint8_t*)pucByte,1);
+    }
+
     return TRUE;
 }
 
@@ -163,6 +206,24 @@ void UART4_IRQHandler(void)
 {
  
     uint32_t u32IntSts = UART4->ISR;
+    //printf("u32IntSts:%d\r\n",u32IntSts);
+    /* Receive Data Available Interrupt Handle */
+    if(u32IntSts & UART_ISR_RDA_INT_Msk)
+    {
+        pxMBFrameCBByteReceived( );
+    }
+
+    /* Transmit Holding Register Empty Interrupt Handle */
+    if(u32IntSts & UART_ISR_THRE_INT_Msk)
+    {
+        pxMBFrameCBTransmitterEmpty( );
+    }
+}
+
+void UART5_IRQHandler(void)
+{
+ 
+    uint32_t u32IntSts = UART5->ISR;
     //printf("u32IntSts:%d\r\n",u32IntSts);
     /* Receive Data Available Interrupt Handle */
     if(u32IntSts & UART_ISR_RDA_INT_Msk)
