@@ -28,4 +28,5 @@
 .\objects\mt_modbus.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\mt_modbus.o: ..\Hal\hal_adc.h
 .\objects\mt_modbus.o: ..\Hal\hal_stepper.h
+.\objects\mt_modbus.o: ..\Hal\hal_dac.h
 .\objects\mt_modbus.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

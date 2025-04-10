@@ -2,6 +2,7 @@
 ".\objects\startup_m0518.o"
 ".\objects\system_m0518.o"
 ".\objects\main.o"
+".\objects\user_misc.o"
 ".\objects\adc.o"
 ".\objects\bpwm.o"
 ".\objects\clk.o"
@@ -26,6 +27,7 @@
 ".\objects\hal_rs485.o"
 ".\objects\hal_adc.o"
 ".\objects\hal_stepper.o"
+".\objects\hal_dac.o"
 ".\objects\portevent.o"
 ".\objects\portserial.o"
 ".\objects\porttimer.o"
@@ -36,6 +38,8 @@
 ".\objects\mb.o"
 ".\objects\mt_modbus.o"
 ".\objects\mt_task.o"
+".\objects\driver_i2c.o"
+".\objects\dev_dac5571.o"
 --library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
 --map --first='startup_M0518.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

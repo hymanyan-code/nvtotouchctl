@@ -3,6 +3,9 @@
         "string.h": "c",
         "hal_beep.h": "c",
         "hal_io.h": "c",
-        "hal_stepper.h": "c"
+        "hal_stepper.h": "c",
+        "m0518.h": "c",
+        "driver_i2c.h": "c",
+        "user_misc.h": "c"
     }
 }

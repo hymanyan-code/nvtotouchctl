@@ -46,7 +46,7 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 
     if( xRxEnable )
     {
-        if(0)
+        if(1)
         {
             UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
         }
@@ -58,7 +58,7 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
     }
     else
     {
-        if(0)
+        if(1)
         {
             UART_DISABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
         }
@@ -70,7 +70,7 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
     }
     if( xTxEnable )
     {
-        if(0)
+        if(1)
         {
             UART_ENABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
         }
@@ -81,7 +81,7 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
     }
     else
     {
-        if(0)
+        if(1)
         {
              UART_DISABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
         }
@@ -115,7 +115,7 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
     if( bInitialized )
     {
         ENTER_CRITICAL_SECTION(  );
-        if(0)
+        if(1)
         {
             SYS_ResetModule(UART4_RST);
 
@@ -144,7 +144,7 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
 BOOL
 xMBPortSerialPutByte( CHAR ucByte )
 {
-    if(0)
+    if(1)
     {
         UART_Write(UART4,(uint8_t*)(&ucByte),1);
     }
@@ -158,7 +158,7 @@ xMBPortSerialPutByte( CHAR ucByte )
 BOOL
 xMBPortSerialGetByte( CHAR * pucByte )
 {
-    if(0)
+    if(1)
     {
         UART_Read(UART4,(uint8_t*)pucByte,1);
     }
@@ -220,20 +220,22 @@ void UART4_IRQHandler(void)
     }
 }
 
+/*
 void UART5_IRQHandler(void)
 {
  
     uint32_t u32IntSts = UART5->ISR;
     //printf("u32IntSts:%d\r\n",u32IntSts);
-    /* Receive Data Available Interrupt Handle */
+    //Receive Data Available Interrupt Handle 
     if(u32IntSts & UART_ISR_RDA_INT_Msk)
     {
         pxMBFrameCBByteReceived( );
     }
 
-    /* Transmit Holding Register Empty Interrupt Handle */
+    // Transmit Holding Register Empty Interrupt Handle 
     if(u32IntSts & UART_ISR_THRE_INT_Msk)
     {
         pxMBFrameCBTransmitterEmpty( );
     }
 }
+*/

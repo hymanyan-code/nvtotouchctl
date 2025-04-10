@@ -20,8 +20,7 @@
 
 
 uint8_t HalDacInit(void);
-uint8_t HalDac1SetVoltage(float vol);
-uint8_t HalDac2SetVoltage(float vol);
+uint8_t HalDac1SetVoltage(uint8_t dac_line, float vol);
 
 
 

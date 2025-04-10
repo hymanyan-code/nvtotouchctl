@@ -29,9 +29,21 @@
 
 typedef enum
 {
-    I2C_1 = 1,
-    I2C_2
-}SoftIIC;
+    I2C_1 = 0,
+    I2C_2,
+    IIC_MAX
+}SoftIICID;
+
+
+typedef struct 
+{
+    GPIO_T* scl_port;
+    uint32_t scl_pin;
+    uint32_t scl_port_pin;
+    GPIO_T* sda_port;
+    uint32_t sda_pin;
+    uint32_t sda_port_pin;
+}DriverI2C_Struct;
 
 
 
@@ -41,13 +53,19 @@ typedef enum
 
 
 
-void DriverI2C_Init(void);
-void DriverI2C_Start(SoftIIC iic);
-void DriverI2C_Stop(SoftIIC iic);
-void DriverI2C_SendByte(SoftIIC iic, uint8_t Byte);
-uint8_t DriverI2C_ReceiveByte(SoftIIC iic);
-void DriverI2C_SendAck(SoftIIC iic, uint8_t AckBit);
-uint8_t DriverI2C_ReceiveAck(SoftIIC iic);
+
+
+
+
+
+
+void DriverI2C_Init(SoftIICID iic);
+void DriverI2C_Start(SoftIICID iic);
+void DriverI2C_Stop(SoftIICID iic);
+void DriverI2C_SendByte(SoftIICID iic, uint8_t Byte);
+uint8_t DriverI2C_ReceiveByte(SoftIICID iic);
+void DriverI2C_SendAck(SoftIICID iic, uint8_t AckBit);
+uint8_t DriverI2C_ReceiveAck(SoftIICID iic);
 
 
 

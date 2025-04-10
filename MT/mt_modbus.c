@@ -244,13 +244,13 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
     {
         dac_voltage[0] = (uint16_t)value;
         printf("dac1 voltage:[%d][%d]\r\n",value,dac_voltage[0]);
-        HalDac1SetVoltage((float)value/1000/2);
+        HalDac1SetVoltage(1,(float)value/1000/2);
     }
     else if(index == REG_HONGING_DAC2)
     {
         dac_voltage[1] = (uint16_t)value;
         printf("dac2 voltage:[%d][%d]\r\n",value,dac_voltage[1]);
-        HalDac2SetVoltage((float)value/1000/2);
+        HalDac2SetVoltage(2,(float)value/1000/2);
     }
     else
     {
