@@ -177,3 +177,94 @@ int main(void)
 
    
 }
+
+
+#define xPSR_ISR_Msk   (0x1FFUL)
+
+/**
+  * @brief      User defined hard fault handler
+  * @param      stack   A pointer to current stack
+  * @return     None
+  * @details    This function is an example to show how to implement user's hard fault handler
+  *
+  */
+uint32_t ProcessHardFault(uint32_t lr, uint32_t msp, uint32_t psp)
+{
+    uint32_t exception_num;
+    uint32_t r0, r1, r2, r3, r12, pc, psr;
+    uint32_t *stack;
+
+    if (lr & 4)
+        stack = (uint32_t *)psp;
+    else
+        stack = (uint32_t *)msp;
+
+    /* Get information from stack */
+    r0  = stack[0];
+    r1  = stack[1];
+    r2  = stack[2];
+    r3  = stack[3];
+    r12 = stack[4];
+    lr  = stack[5];
+    pc  = stack[6];
+    psr = stack[7];
+
+
+    /* Check T bit of psr */
+    if((psr & (1 << 24)) == 0)
+    {
+        printf("PSR T bit is 0.\nHard fault caused by changing to ARM mode!\n");
+        while(1);
+    }
+
+    /* Check hard fault caused by ISR */
+    exception_num = psr & xPSR_ISR_Msk;
+    if(exception_num > 0)
+    {
+        /*
+        Exception number
+            0 = Thread mode
+            1 = Reserved
+            2 = NMI
+            3 = HardFault
+            4-10 = Reserved11 = SVCall
+            12, 13 = Reserved
+            14 = PendSV
+            15 = SysTick, if implemented[a]
+            16 = IRQ0.
+                .
+                .
+            n+15 = IRQ(n-1)[b]
+            (n+16) to 63 = Reserved.
+        The number of interrupts, n, is 32
+        */
+
+        printf("Hard fault is caused in IRQ #%d\n", exception_num - 16);
+
+        while(1);
+    }
+
+    printf("Hard fault location is at 0x%x\n", pc);
+    /*
+        If the hard fault location is a memory access instruction, You may debug the load/store issues.
+
+        Memory access faults can be caused by:
+            Invalid address - read/write wrong address
+            Data alignment issue - Violate alignment rule of Cortex-M processor
+            Memory access permission - MPU violations or unprivileged access (Cortex-M0+)
+            Bus components or peripheral returned an error response.
+    */
+
+
+    printf("r0  = 0x%x\n", r0);
+    printf("r1  = 0x%x\n", r1);
+    printf("r2  = 0x%x\n", r2);
+    printf("r3  = 0x%x\n", r3);
+    printf("r12 = 0x%x\n", r12);
+    printf("lr  = 0x%x\n", lr);
+    printf("pc  = 0x%x\n", pc);
+    printf("psr = 0x%x\n", psr);
+
+    while(1);
+
+}

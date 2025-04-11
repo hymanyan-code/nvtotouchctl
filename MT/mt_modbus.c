@@ -250,7 +250,7 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
     {
         dac_voltage[1] = (uint16_t)value;
         printf("dac2 voltage:[%d][%d]\r\n",value,dac_voltage[1]);
-        HalDac2SetVoltage(2,(float)value/1000/2);
+        HalDac1SetVoltage(2,(float)value/1000/2);
     }
     else
     {

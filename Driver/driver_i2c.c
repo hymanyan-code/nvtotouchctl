@@ -3,8 +3,8 @@
 
 
 DriverI2C_Struct drv_iic[IIC_MAX] = {
-	{IIC_SCL1_PORT, IIC_SCL1_PIN, IIC_SCL1_P_P, IIC_SDA1_PORT, IIC_SDA1_PIN, IIC_SDA1_P_P},
-	{IIC_SCL2_PORT, IIC_SCL2_PIN, IIC_SCL2_P_P, IIC_SDA2_PORT, IIC_SDA2_PIN, IIC_SDA2_P_P}
+	{(GPIO_T*)IIC_SCL1_PORT, IIC_SCL1_PIN, (volatile uint32_t*)&(IIC_SCL1_P_P), (GPIO_T*)IIC_SDA1_PORT, IIC_SDA1_PIN, (volatile uint32_t*)&(IIC_SDA1_P_P)},
+	{(GPIO_T*)IIC_SCL2_PORT, IIC_SCL2_PIN, (volatile uint32_t*)&(IIC_SCL2_P_P), (GPIO_T*)IIC_SDA2_PORT, IIC_SDA2_PIN, (volatile uint32_t*)&(IIC_SDA2_P_P)}
 };
 
 
@@ -76,11 +76,11 @@ uint8_t DriverI2C_SDA_READ(SoftIICID iic)
 void DriverI2C_Init(SoftIICID iic)
 {
 
-	GPIO_SetMode(drv_iic[iic].scl_port, drv_iic[iic].scl_port, GPIO_PMD_OPEN_DRAIN);
-	GPIO_SetMode(drv_iic[iic].sda_port, drv_iic[iic].sda_port, GPIO_PMD_OPEN_DRAIN);
+	GPIO_SetMode(drv_iic[iic].scl_port, drv_iic[iic].sda_pin, GPIO_PMD_OPEN_DRAIN);
+	GPIO_SetMode(drv_iic[iic].scl_port, drv_iic[iic].sda_pin, GPIO_PMD_OPEN_DRAIN);
 
-	drv_iic[iic].scl_port_pin = 1;
-	drv_iic[iic].sda_port_pin = 1;
+	*drv_iic[iic].scl_port_pin = 1;
+	*drv_iic[iic].sda_port_pin = 1;
 
 
 	// GPIO_SetMode(IIC_SCL1_PORT, IIC_SCL1_PIN, GPIO_PMD_OPEN_DRAIN);

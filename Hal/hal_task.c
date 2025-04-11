@@ -7,8 +7,13 @@
 #include "hal_rs485.h"
 #include "hal_adc.h"
 #include "hal_stepper.h"
+#include "hal_iflash.h"
+
+
+
 void hal_task_init(void)
 {
+    HalIflashInit();
     hal_MatrixtimerInit();
     hal_beep_init();
     hal_LedInit();

@@ -25,7 +25,7 @@
 /* ----------------------- Modbus includes ----------------------------------*/
 #include "mb.h"
 #include "mbport.h"
-
+#include "stdio.h"
 /* ----------------------- Defines ------------------------------------------*/
 /* Timer ticks are counted in multiples of 50us. Therefore 20000 ticks are
  * one second.

@@ -39,10 +39,10 @@ typedef struct
 {
     GPIO_T* scl_port;
     uint32_t scl_pin;
-    uint32_t scl_port_pin;
+    volatile uint32_t* scl_port_pin;
     GPIO_T* sda_port;
     uint32_t sda_pin;
-    uint32_t sda_port_pin;
+    volatile uint32_t* sda_port_pin;
 }DriverI2C_Struct;
 
 
