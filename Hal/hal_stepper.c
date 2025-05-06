@@ -71,3 +71,16 @@ uint8_t HalStepperGetDir(void)
 {
     return stepper.dir;
 }
+
+
+
+void HalStepperEnHigh(void)
+{
+    STEP_EN_PORT_PIN = 0;   
+
+}
+
+void HalStepperEnLow(void)
+{
+    STEP_EN_PORT_PIN = 1;  
+}

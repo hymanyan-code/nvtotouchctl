@@ -28,6 +28,7 @@
 ".\objects\hal_adc.o"
 ".\objects\hal_stepper.o"
 ".\objects\hal_dac.o"
+".\objects\hal_iflash.o"
 ".\objects\portevent.o"
 ".\objects\portserial.o"
 ".\objects\porttimer.o"

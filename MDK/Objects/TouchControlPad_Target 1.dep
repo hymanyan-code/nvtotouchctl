@@ -1,749 +1,773 @@
 Dependencies for Project 'TouchControlPad', Target 'Target 1': (DO NOT MODIFY !)
-F (..\Core\core_cm0.h)(0x67EDF1CD)()
-F (..\Core\core_cmFunc.h)(0x67EDF1CD)()
-F (..\Core\core_cmInstr.h)(0x67EDF1CD)()
-F (..\System\M0518.h)(0x67EDF1CD)()
-F (..\System\startup_M0518.s)(0x67EDF1CD)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524"--list .\listings\startup_m0518.lst --xref -o .\objects\startup_m0518.o --depend .\objects\startup_m0518.d)
-F (..\System\system_M0518.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\system_m0518.o --omf_browse .\objects\system_m0518.crf --depend .\objects\system_m0518.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\System\system_M0518.h)(0x67EDF1CD)()
-F (..\User\main.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\OS\OS_System.h)(0x67EDF1CD)
-I (..\OS\CPU.h)(0x67EDF1CD)
-I (..\Hal\hal_task.h)(0x67EDF1CD)
-I (..\MT\mt_task.h)(0x67EDF1CD)
-F (..\User\user_misc.c)(0x67EE3FF7)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\user_misc.o --omf_browse .\objects\user_misc.crf --depend .\objects\user_misc.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-F (..\StdDriver\src\adc.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\bpwm.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\bpwm.o --omf_browse .\objects\bpwm.crf --depend .\objects\bpwm.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\clk.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\clk.o --omf_browse .\objects\clk.crf --depend .\objects\clk.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\fmc.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\fmc.o --omf_browse .\objects\fmc.crf --depend .\objects\fmc.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\gpio.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\i2c.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\pwm.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\pwm.o --omf_browse .\objects\pwm.crf --depend .\objects\pwm.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\retarget.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\retarget.o --omf_browse .\objects\retarget.crf --depend .\objects\retarget.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\spi.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\sys.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\timer.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\uart.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\wdt.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\wdt.o --omf_browse .\objects\wdt.crf --depend .\objects\wdt.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\StdDriver\src\wwdt.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\wwdt.o --omf_browse .\objects\wwdt.crf --depend .\objects\wwdt.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-F (..\OS\cpu.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\cpu.o --omf_browse .\objects\cpu.crf --depend .\objects\cpu.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\OS\OS_System.h)(0x67EDF1CD)
-I (..\OS\CPU.h)(0x67EDF1CD)
-F (..\OS\OS_System.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\os_system.o --omf_browse .\objects\os_system.crf --depend .\objects\os_system.d)
-I (..\OS\OS_System.h)(0x67EDF1CD)
-F (..\Hal\hal_led.c)(0x67EDF200)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_led.o --omf_browse .\objects\hal_led.crf --depend .\objects\hal_led.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_led.h)(0x67EDF1CD)
-F (..\Hal\hal_task.c)(0x67EDF200)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_task.o --omf_browse .\objects\hal_task.crf --depend .\objects\hal_task.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_task.h)(0x67EDF1CD)
-I (..\Hal\hal_led.h)(0x67EDF1CD)
-I (..\Hal\hal_timer.h)(0x67EDF200)
-I (..\Hal\hal_beep.h)(0x67EDF1CD)
-I (..\Hal\hal_io.h)(0x67EDF200)
-I (..\Hal\hal_rs485.h)(0x67EDF1CD)
-I (..\Hal\hal_adc.h)(0x67EDF200)
-I (..\Hal\hal_stepper.h)(0x67EDF200)
-F (..\Hal\hal_timer.c)(0x67EDF200)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_timer.o --omf_browse .\objects\hal_timer.crf --depend .\objects\hal_timer.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_timer.h)(0x67EDF200)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
-F (..\Hal\hal_beep.c)(0x67EDF200)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_beep.o --omf_browse .\objects\hal_beep.crf --depend .\objects\hal_beep.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_beep.h)(0x67EDF1CD)
-F (..\Hal\hal_io.c)(0x67EDF200)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_io.o --omf_browse .\objects\hal_io.crf --depend .\objects\hal_io.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_io.h)(0x67EDF200)
-I (..\Hal\hal_beep.h)(0x67EDF1CD)
-I (..\Hal\hal_timer.h)(0x67EDF200)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (..\Hal\hal_rs485.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_rs485.o --omf_browse .\objects\hal_rs485.crf --depend .\objects\hal_rs485.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_rs485.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-I (..\Hal\hal_io.h)(0x67EDF200)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (..\Hal\hal_adc.c)(0x67EE188A)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_adc.o --omf_browse .\objects\hal_adc.crf --depend .\objects\hal_adc.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_adc.h)(0x67EDF200)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (..\Hal\hal_stepper.c)(0x67EDF200)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_stepper.o --omf_browse .\objects\hal_stepper.crf --depend .\objects\hal_stepper.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Hal\hal_stepper.h)(0x67EDF200)
-F (..\Hal\hal_dac.c)(0x67EE3F05)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\hal_dac.o --omf_browse .\objects\hal_dac.crf --depend .\objects\hal_dac.d)
-I (..\Hal\hal_dac.h)(0x67EE3E7E)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Driver\driver_i2c.h)(0x67EE3F79)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Device\dev_dac5571.h)(0x67EE31F8)
-I (..\User\user_misc.h)(0x67EE3E62)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (..\Modbus\port\portevent.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\portevent.o --omf_browse .\objects\portevent.crf --depend .\objects\portevent.d)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-F (..\Modbus\port\portserial.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\portserial.o --omf_browse .\objects\portserial.crf --depend .\objects\portserial.d)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-F (..\Modbus\port\porttimer.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\porttimer.o --omf_browse .\objects\porttimer.crf --depend .\objects\porttimer.d)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Hal\hal_timer.h)(0x67EDF200)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-F (..\Modbus\modbus\functions\mbfuncholding.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mbfuncholding.o --omf_browse .\objects\mbfuncholding.crf --depend .\objects\mbfuncholding.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbframe.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbconfig.h)(0x67EDF1CD)
-F (..\Modbus\modbus\functions\mbutils.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mbutils.o --omf_browse .\objects\mbutils.crf --depend .\objects\mbutils.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-F (..\Modbus\modbus\rtu\mbcrc.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mbcrc.o --omf_browse .\objects\mbcrc.crf --depend .\objects\mbcrc.d)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-F (..\Modbus\modbus\rtu\mbrtu.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mbrtu.o --omf_browse .\objects\mbrtu.crf --depend .\objects\mbrtu.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-I (..\Modbus\modbus\rtu\mbrtu.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbframe.h)(0x67EDF1CD)
-I (..\Modbus\modbus\rtu\mbcrc.h)(0x67EDF1CD)
-F (..\Modbus\modbus\mb.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mb.o --omf_browse .\objects\mb.crf --depend .\objects\mb.d)
-I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbconfig.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbframe.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbfunc.h)(0x67EDF1CD)
-I (..\Modbus\modbus\rtu\mbrtu.h)(0x67EDF1CD)
-F (..\MT\mt_modbus.c)(0x67EE3F8C)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mt_modbus.o --omf_browse .\objects\mt_modbus.crf --depend .\objects\mt_modbus.d)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\MT\mt_modbus.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-I (..\Hal\hal_io.h)(0x67EDF200)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\Hal\hal_adc.h)(0x67EDF200)
-I (..\Hal\hal_stepper.h)(0x67EDF200)
-I (..\Hal\hal_dac.h)(0x67EE3E7E)
-I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
-F (..\MT\mt_task.c)(0x67EDF1CD)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\mt_task.o --omf_browse .\objects\mt_task.crf --depend .\objects\mt_task.d)
-I (..\MT\mt_task.h)(0x67EDF1CD)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mb.h)(0x67EDF1CD)
-I (..\Modbus\port\port.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbport.h)(0x67EDF1CD)
-I (..\Modbus\modbus\include\mbproto.h)(0x67EDF1CD)
-I (..\MT\mt_modbus.h)(0x67EDF1CD)
-F (..\Driver\driver_i2c.c)(0x67EE3F01)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\driver_i2c.o --omf_browse .\objects\driver_i2c.crf --depend .\objects\driver_i2c.d)
-I (..\Driver\driver_i2c.h)(0x67EE3F79)
-I (..\System\M0518.h)(0x67EDF1CD)
-I (..\Core\core_cm0.h)(0x67EDF1CD)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Core\core_cmInstr.h)(0x67EDF1CD)
-I (..\Core\core_cmFunc.h)(0x67EDF1CD)
-I (..\System\system_M0518.h)(0x67EDF1CD)
-I (..\StdDriver\inc\sys.h)(0x67EDF1CD)
-I (..\StdDriver\inc\adc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\fmc.h)(0x67EDF1CD)
-I (..\StdDriver\inc\gpio.h)(0x67EDF1CD)
-I (..\StdDriver\inc\i2c.h)(0x67EDF1CD)
-I (..\StdDriver\inc\pwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\bpwm.h)(0x67EDF1CD)
-I (..\StdDriver\inc\spi.h)(0x67EDF1CD)
-I (..\StdDriver\inc\timer.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\wwdt.h)(0x67EDF1CD)
-I (..\StdDriver\inc\uart.h)(0x67EDF1CD)
-I (..\StdDriver\inc\clk.h)(0x67EDF1CD)
-I (..\User\user_misc.h)(0x67EE3E62)
-F (..\Device\dev_dac5571.c)(0x67EE3F05)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\objects\dev_dac5571.o --omf_browse .\objects\dev_dac5571.crf --depend .\objects\dev_dac5571.d)
-I (..\Device\dev_dac5571.h)(0x67EE31F8)
+F (..\Core\core_cm0.h)(0x6807B156)()
+F (..\Core\core_cmFunc.h)(0x6807B156)()
+F (..\Core\core_cmInstr.h)(0x6807B156)()
+F (..\System\M0518.h)(0x6807B156)()
+F (..\System\startup_M0518.s)(0x6807B156)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 525"--list .\listings\startup_m0518.lst --xref -o .\objects\startup_m0518.o --depend .\objects\startup_m0518.d)
+F (..\System\system_M0518.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\system_m0518.o --omf_browse .\objects\system_m0518.crf --depend .\objects\system_m0518.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\System\system_M0518.h)(0x6807B156)()
+F (..\User\main.c)(0x6807B160)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\OS\OS_System.h)(0x6807B156)
+I (..\OS\CPU.h)(0x6807B156)
+I (..\Hal\hal_task.h)(0x6807B156)
+I (..\MT\mt_task.h)(0x6807B156)
+F (..\User\user_misc.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\user_misc.o --omf_browse .\objects\user_misc.crf --depend .\objects\user_misc.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+F (..\StdDriver\src\adc.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\bpwm.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\bpwm.o --omf_browse .\objects\bpwm.crf --depend .\objects\bpwm.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\clk.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\clk.o --omf_browse .\objects\clk.crf --depend .\objects\clk.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\fmc.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\fmc.o --omf_browse .\objects\fmc.crf --depend .\objects\fmc.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\gpio.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\i2c.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\pwm.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\pwm.o --omf_browse .\objects\pwm.crf --depend .\objects\pwm.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\retarget.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\retarget.o --omf_browse .\objects\retarget.crf --depend .\objects\retarget.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\spi.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\sys.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\timer.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\uart.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\wdt.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\wdt.o --omf_browse .\objects\wdt.crf --depend .\objects\wdt.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\StdDriver\src\wwdt.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\wwdt.o --omf_browse .\objects\wwdt.crf --depend .\objects\wwdt.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+F (..\OS\cpu.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\cpu.o --omf_browse .\objects\cpu.crf --depend .\objects\cpu.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\OS\OS_System.h)(0x6807B156)
+I (..\OS\CPU.h)(0x6807B156)
+F (..\OS\OS_System.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\os_system.o --omf_browse .\objects\os_system.crf --depend .\objects\os_system.d)
+I (..\OS\OS_System.h)(0x6807B156)
+F (..\Hal\hal_led.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_led.o --omf_browse .\objects\hal_led.crf --depend .\objects\hal_led.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_led.h)(0x6807B156)
+F (..\Hal\hal_task.c)(0x6807B209)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_task.o --omf_browse .\objects\hal_task.crf --depend .\objects\hal_task.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_task.h)(0x6807B156)
+I (..\Hal\hal_led.h)(0x6807B156)
+I (..\Hal\hal_timer.h)(0x6807B156)
+I (..\Hal\hal_beep.h)(0x6807B156)
+I (..\Hal\hal_io.h)(0x6807B156)
+I (..\Hal\hal_rs485.h)(0x6807B156)
+I (..\Hal\hal_adc.h)(0x6807B156)
+I (..\Hal\hal_stepper.h)(0x6807B156)
+I (..\Hal\hal_iflash.h)(0x6807B160)
+F (..\Hal\hal_timer.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_timer.o --omf_browse .\objects\hal_timer.crf --depend .\objects\hal_timer.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_timer.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+F (..\Hal\hal_beep.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_beep.o --omf_browse .\objects\hal_beep.crf --depend .\objects\hal_beep.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_beep.h)(0x6807B156)
+F (..\Hal\hal_io.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_io.o --omf_browse .\objects\hal_io.crf --depend .\objects\hal_io.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_io.h)(0x6807B156)
+I (..\Hal\hal_beep.h)(0x6807B156)
+I (..\Hal\hal_timer.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+F (..\Hal\hal_rs485.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_rs485.o --omf_browse .\objects\hal_rs485.crf --depend .\objects\hal_rs485.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_rs485.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (..\Hal\hal_io.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+F (..\Hal\hal_adc.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_adc.o --omf_browse .\objects\hal_adc.crf --depend .\objects\hal_adc.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_adc.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+F (..\Hal\hal_stepper.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_stepper.o --omf_browse .\objects\hal_stepper.crf --depend .\objects\hal_stepper.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_stepper.h)(0x6807B156)
+F (..\Hal\hal_dac.c)(0x6807B160)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_dac.o --omf_browse .\objects\hal_dac.crf --depend .\objects\hal_dac.d)
+I (..\Hal\hal_dac.h)(0x6807B160)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Driver\driver_i2c.h)(0x6807B160)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Device\dev_dac5571.h)(0x6807B160)
+I (..\User\user_misc.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+F (..\Hal\hal_iflash.c)(0x6807B21D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\hal_iflash.o --omf_browse .\objects\hal_iflash.crf --depend .\objects\hal_iflash.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Hal\hal_iflash.h)(0x6807B160)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+F (..\Modbus\port\portevent.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\portevent.o --omf_browse .\objects\portevent.crf --depend .\objects\portevent.d)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+F (..\Modbus\port\portserial.c)(0x6807B160)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\portserial.o --omf_browse .\objects\portserial.crf --depend .\objects\portserial.d)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+F (..\Modbus\port\porttimer.c)(0x6807B160)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\porttimer.o --omf_browse .\objects\porttimer.crf --depend .\objects\porttimer.d)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Hal\hal_timer.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+F (..\Modbus\modbus\functions\mbfuncholding.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mbfuncholding.o --omf_browse .\objects\mbfuncholding.crf --depend .\objects\mbfuncholding.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbframe.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbconfig.h)(0x6807B156)
+F (..\Modbus\modbus\functions\mbutils.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mbutils.o --omf_browse .\objects\mbutils.crf --depend .\objects\mbutils.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+F (..\Modbus\modbus\rtu\mbcrc.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mbcrc.o --omf_browse .\objects\mbcrc.crf --depend .\objects\mbcrc.d)
+I (..\Modbus\port\port.h)(0x6807B156)
+F (..\Modbus\modbus\rtu\mbrtu.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mbrtu.o --omf_browse .\objects\mbrtu.crf --depend .\objects\mbrtu.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (..\Modbus\modbus\rtu\mbrtu.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbframe.h)(0x6807B156)
+I (..\Modbus\modbus\rtu\mbcrc.h)(0x6807B156)
+F (..\Modbus\modbus\mb.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mb.o --omf_browse .\objects\mb.crf --depend .\objects\mb.d)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x569DEA3A)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x569DEA3A)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbconfig.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbframe.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbfunc.h)(0x6807B156)
+I (..\Modbus\modbus\rtu\mbrtu.h)(0x6807B156)
+F (..\MT\mt_modbus.c)(0x6807B160)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mt_modbus.o --omf_browse .\objects\mt_modbus.crf --depend .\objects\mt_modbus.d)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\MT\mt_modbus.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (..\Hal\hal_io.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
+I (..\Hal\hal_adc.h)(0x6807B156)
+I (..\Hal\hal_stepper.h)(0x6807B156)
+I (..\Hal\hal_dac.h)(0x6807B160)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x569DEA3A)
+F (..\MT\mt_task.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\mt_task.o --omf_browse .\objects\mt_task.crf --depend .\objects\mt_task.d)
+I (..\MT\mt_task.h)(0x6807B156)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\Modbus\modbus\include\mb.h)(0x6807B156)
+I (..\Modbus\port\port.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbport.h)(0x6807B156)
+I (..\Modbus\modbus\include\mbproto.h)(0x6807B156)
+I (..\MT\mt_modbus.h)(0x6807B156)
+F (..\Driver\driver_i2c.c)(0x6807B160)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\driver_i2c.o --omf_browse .\objects\driver_i2c.crf --depend .\objects\driver_i2c.d)
+I (..\Driver\driver_i2c.h)(0x6807B160)
+I (..\System\M0518.h)(0x6807B156)
+I (..\Core\core_cm0.h)(0x6807B156)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (..\Core\core_cmInstr.h)(0x6807B156)
+I (..\Core\core_cmFunc.h)(0x6807B156)
+I (..\System\system_M0518.h)(0x6807B156)
+I (..\StdDriver\inc\sys.h)(0x6807B156)
+I (..\StdDriver\inc\adc.h)(0x6807B156)
+I (..\StdDriver\inc\fmc.h)(0x6807B156)
+I (..\StdDriver\inc\gpio.h)(0x6807B156)
+I (..\StdDriver\inc\i2c.h)(0x6807B156)
+I (..\StdDriver\inc\pwm.h)(0x6807B156)
+I (..\StdDriver\inc\bpwm.h)(0x6807B156)
+I (..\StdDriver\inc\spi.h)(0x6807B156)
+I (..\StdDriver\inc\timer.h)(0x6807B156)
+I (..\StdDriver\inc\wdt.h)(0x6807B156)
+I (..\StdDriver\inc\wwdt.h)(0x6807B156)
+I (..\StdDriver\inc\uart.h)(0x6807B156)
+I (..\StdDriver\inc\clk.h)(0x6807B156)
+I (..\User\user_misc.h)(0x6807B156)
+F (..\Device\dev_dac5571.c)(0x6807B156)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Core -I ..\System -I ..\StdDriver\inc -I ..\OS -I ..\Hal -I ..\Modbus\port -I ..\Modbus\modbus\include -I ..\Modbus\modbus\rtu -I ..\MT -I ..\Driver -I ..\Device -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.3.26\Device\M0518\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\objects\dev_dac5571.o --omf_browse .\objects\dev_dac5571.crf --depend .\objects\dev_dac5571.d)
+I (..\Device\dev_dac5571.h)(0x6807B160)

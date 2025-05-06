@@ -23,8 +23,8 @@ void hal_LedHandle(void)
 
 static void hal_LedConfig(void)
 {
-    GPIO_SetMode(PA, BIT8, GPIO_PMD_OUTPUT); // led
-    PA8 = 1;								 // OFF
+    GPIO_SetMode(LED_PORT, LED_PIN, GPIO_PMD_OUTPUT); // led
+    LED_PORT_PIN = 1;								 // OFF
 }
 
 ////
@@ -35,12 +35,12 @@ static void hal_Led1Turn(void)
 
     if (i == 0)
     {
-        PA8 = 0; // ON
+        LED_PORT_PIN = 0; // ON
         i = 1;
     }
     else
     {
-        PA8 = 1; // OFF
+        LED_PORT_PIN = 1; // OFF
         i = 0;
     }
 }

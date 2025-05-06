@@ -27,3 +27,4 @@
 .\objects\hal_task.o: ..\Hal\hal_rs485.h
 .\objects\hal_task.o: ..\Hal\hal_adc.h
 .\objects\hal_task.o: ..\Hal\hal_stepper.h
+.\objects\hal_task.o: ..\Hal\hal_iflash.h

@@ -176,7 +176,7 @@ static int  SetDataFlashBase(uint32_t u32DFBA)
 
     /* Just return when Data Flash has been enabled */
     if(!(au32Config[0] & 0x1))
-        return 0;
+        return -1;
 
     /* Enable User Configuration Update */
     FMC_EnableConfigUpdate();

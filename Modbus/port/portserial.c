@@ -30,7 +30,7 @@
 //#include "log.h"
 /* ----------------------- Defines ------------------------------------------*/
 
-
+#define MODBUS_UART4_ENABLE    1
 
 
 
@@ -46,49 +46,36 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 
     if( xRxEnable )
     {
-        if(1)
-        {
-            UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
-        }
-        else
-        {
-            UART_ENABLE_INT(UART5, (UART_IER_RDA_IEN_Msk ));
-        }
-
+#if MODBUS_UART4_ENABLE==1
+        UART_ENABLE_INT(UART4, (UART_IER_RDA_IEN_Msk ));
+#else
+        UART_ENABLE_INT(UART5, (UART_IER_RDA_IEN_Msk ));
+#endif
     }
     else
     {
-        if(1)
-        {
-            UART_DISABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
-        }
-        else
-        {
-            UART_DISABLE_INT(UART5, UART_IER_RDA_IEN_Msk);
-        }
+#if MODBUS_UART4_ENABLE==1
+        UART_DISABLE_INT(UART4, UART_IER_RDA_IEN_Msk);
+#else
+        UART_DISABLE_INT(UART5, UART_IER_RDA_IEN_Msk);
+#endif
 
     }
     if( xTxEnable )
     {
-        if(1)
-        {
-            UART_ENABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
-        }
-        else
-        {
-            UART_ENABLE_INT(UART5, UART_IER_THRE_IEN_Msk);
-        }
+#if MODBUS_UART4_ENABLE==1
+        UART_ENABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
+#else
+        UART_ENABLE_INT(UART5, UART_IER_THRE_IEN_Msk);
+#endif
     }
     else
     {
-        if(1)
-        {
-             UART_DISABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
-        }
-        else
-        {
-            UART_DISABLE_INT(UART5, UART_IER_THRE_IEN_Msk);
-        }
+#if MODBUS_UART4_ENABLE==1
+        UART_DISABLE_INT(UART4, UART_IER_THRE_IEN_Msk);
+#else
+        UART_DISABLE_INT(UART5, UART_IER_THRE_IEN_Msk);
+#endif
     }
 
 }
@@ -115,25 +102,21 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
     if( bInitialized )
     {
         ENTER_CRITICAL_SECTION(  );
-        if(1)
-        {
-            SYS_ResetModule(UART4_RST);
+ #if MODBUS_UART4_ENABLE==1
+        SYS_ResetModule(UART4_RST);
 
-            UART_Open(UART4, 19200);
-            UART_SetLine_Config(UART4, 19200, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
+        UART_Open(UART4, 19200);
+        UART_SetLine_Config(UART4, 19200, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
 
-            NVIC_EnableIRQ(UART4_IRQn);
-        }
-        else
-        {
-            SYS_ResetModule(UART5_RST);
+        NVIC_EnableIRQ(UART4_IRQn);
+#else
+        SYS_ResetModule(UART5_RST);
 
-            UART_Open(UART5, 19200);
-            UART_SetLine_Config(UART5, 19200, UART_WORD_LEN_8,  UART_PARITY_NONE,  UART_STOP_BIT_1);
+        UART_Open(UART5, 19200);
+        UART_SetLine_Config(UART5, 19200, UART_WORD_LEN_8,  UART_PARITY_NONE,  UART_STOP_BIT_1);
 
-            NVIC_EnableIRQ(UART5_IRQn);
-
-        }
+        NVIC_EnableIRQ(UART5_IRQn);
+#endif
 
         EXIT_CRITICAL_SECTION(  );
    
@@ -144,28 +127,23 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
 BOOL
 xMBPortSerialPutByte( CHAR ucByte )
 {
-    if(1)
-    {
-        UART_Write(UART4,(uint8_t*)(&ucByte),1);
-    }
-    else
-    {
-        UART_Write(UART5,(uint8_t*)(&ucByte),1);
-    }
+#if MODBUS_UART4_ENABLE==1
+    UART_Write(UART4,(uint8_t*)(&ucByte),1);
+#else
+    UART_Write(UART5,(uint8_t*)(&ucByte),1);
+#endif       
+
     return TRUE;
 }
 
 BOOL
 xMBPortSerialGetByte( CHAR * pucByte )
 {
-    if(1)
-    {
-        UART_Read(UART4,(uint8_t*)pucByte,1);
-    }
-    else
-    {
-        UART_Read(UART5,(uint8_t*)pucByte,1);
-    }
+#if MODBUS_UART4_ENABLE==1
+    UART_Read(UART4,(uint8_t*)pucByte,1);
+#else
+    UART_Read(UART5,(uint8_t*)pucByte,1);
+#endif
 
     return TRUE;
 }
@@ -201,7 +179,7 @@ void ExitCriticalSection(void)
     }
 }
 
-
+#if MODBUS_UART4_ENABLE==1
 void UART4_IRQHandler(void)
 {
  
@@ -220,7 +198,8 @@ void UART4_IRQHandler(void)
     }
 }
 
-/*
+#else
+
 void UART5_IRQHandler(void)
 {
  
@@ -238,4 +217,5 @@ void UART5_IRQHandler(void)
         pxMBFrameCBTransmitterEmpty( );
     }
 }
-*/
+
+#endif

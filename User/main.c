@@ -130,16 +130,16 @@ static __INLINE uint32_t ADC_GetConversionRate()
 
 
 
-void DEBUG_UART1_Init(void)
+void DEBUG_UART5_Init(void)
 {
     /*---------------------------------------------------------------------------------------------------------*/
     /* Init UART                                                                                               */
     /*---------------------------------------------------------------------------------------------------------*/
     /* Reset UART1 module */
-    SYS_ResetModule(UART1_RST);
+    SYS_ResetModule(UART5_RST);
 
     /* Configure UART1 and set UART0 Baudrate */
-    UART_Open(UART1, 115200);
+    UART_Open(UART5, 115200);
 
 
 }
@@ -150,7 +150,7 @@ int main(void)
 	SYS_UnlockReg();
 	SYS_Init();
 	SYS_LockReg();
-    DEBUG_UART1_Init();
+    DEBUG_UART5_Init();
 	
 
     hal_CPUInit();
@@ -167,8 +167,8 @@ int main(void)
     printf("Task Initialized,ADC @%d Hz\n",ADC_GetConversionRate());	
 	OS_CreatTask(OS_TASK1,hal_task,1,OS_RUN);	
 
-    mt_task_init();	
-	OS_CreatTask(OS_TASK2,mt_task,1,OS_RUN);	
+    //mt_task_init();	
+	//OS_CreatTask(OS_TASK2,mt_task,1,OS_RUN);	
 	
     
     OS_Start();	 

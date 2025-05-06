@@ -13,6 +13,9 @@
 #define DIR_PORT_PIN     PF8
 
 
+#define STEP_EN_PORT         PA
+#define STEP_EN_PIN          BIT7
+#define STEP_EN_PORT_PIN     PA7
 
 
 void HalStepperInit(void);

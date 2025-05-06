@@ -29,8 +29,8 @@ void hal_task_init(void)
 void hal_task(void)
 {
 
-    hal_handle_input_10ms_loop();
-    hal_handle_output_10ms_loop();
+   // hal_handle_input_10ms_loop();
+   // hal_handle_output_10ms_loop();
     hal_LedHandle();
     HalAdcConverteFlow();
 }
