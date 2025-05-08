@@ -15,23 +15,23 @@
 
 #define REG_HONGING_PRODUCT          (0)
 #define REG_HONGING_SW               (1)
-#define REG_HONGING_IO               (2) 
-#define REG_HONGING_ADC1             (3)
-#define REG_HONGING_ADC2             (4)
-#define REG_HONGING_TEMP_COEF_K      (5)
-#define REG_HONGING_TEMP_COEF_B      (6)
-#define REG_HONGING_TEMP_RES         (7)  
-#define REG_HONGING_TEMP             (8)  
-#define REG_HONGING_STEP_CTL        (9)
-#define REG_HONGING_STEP_SPEED      (10)
+#define REG_HONGING_INPUT              (2) 
+#define REG_HONGING_OUTPUT               (3)
+#define REG_HONGING_RELAY               (4)
+#define REG_HONGING_ADC1             (5)
+#define REG_HONGING_ADC2             (6)
+#define REG_HONGING_TEMP_COEF_K      (7)
+#define REG_HONGING_TEMP_COEF_B      (8)
+#define REG_HONGING_TEMP_RES         (9)  
+#define REG_HONGING_TEMP             (10)  
+#define REG_HONGING_STEP_CTL        (11)
+#define REG_HONGING_STEP_SPEED      (12)
 
-#define REG_HONGING_DAC1          (12)
-#define REG_HONGING_DAC2          (13)
+#define REG_HONGING_DAC1          (14)
+#define REG_HONGING_DAC2          (15)
 
 
-
-
-#define REG_HOLDING_NREGS            (14)
+#define REG_HOLDING_NREGS            (16)
 
 #define MB_SLAVE_ADRESS 0x31
 USHORT usRegHoldingBuf[REG_HOLDING_NREGS];
@@ -52,7 +52,7 @@ uint32_t floatToUint(float floatValue)
 float calculate_temperature(float Rt)
 {
     if (Rt < R_MIN || Rt > R_MAX) {
-        printf("Error: Resistance out of range!\n");
+       // printf("Error: Resistance out of range!\n");
         return -999.0f;  // 返回错误标志值
     }
     float temp;
@@ -130,9 +130,17 @@ void MtModbusInit(void)
 
 static void UpdateHoldingRegs(USHORT index)
 {
-    if(index == REG_HONGING_IO)
+    if(index == REG_HONGING_INPUT)
     {
-        usRegHoldingBuf[REG_HONGING_IO]=((USHORT)g_input_state<<8 )| (g_output_state);
+        usRegHoldingBuf[REG_HONGING_INPUT]=g_input_state;
+    }
+    else if(index == REG_HONGING_OUTPUT)
+    {
+        usRegHoldingBuf[REG_HONGING_OUTPUT]=g_output_state;
+    }
+    else if(index == REG_HONGING_RELAY)
+    {
+        usRegHoldingBuf[REG_HONGING_RELAY]=g_relay_state;
     }
     else if(index == REG_HONGING_ADC1)
     {
@@ -194,10 +202,15 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
 {
     eMBErrorCode eStatus = MB_ENOERR;
     static uint32_t u32value = 0;
-    if(index == REG_HONGING_IO)
+    if(index == REG_HONGING_OUTPUT)
     {
         
-        g_output_state = (uint8_t)value;
+        g_output_state = value;
+
+    }
+    else if(index == REG_HONGING_RELAY)
+    {
+        g_relay_state = value;
 
     }
     else if(index == REG_HONGING_TEMP_COEF_K)
@@ -220,7 +233,14 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
             HalStepperStop();
              printf("pwm stop!\r\n");
         }
-        HalStepperSetDir((uint8_t)(value&0x00FF));
+        if(value&0x00FF)
+        {
+            HalStepperSetDir(1);
+        }
+        else
+        {
+            HalStepperSetDir(0);
+        }
     }
     else if(index == REG_HONGING_STEP_SPEED)
     {

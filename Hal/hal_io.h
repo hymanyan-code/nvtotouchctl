@@ -3,6 +3,7 @@
 
 #define INPUT_MAX   (9)
 #define OUTPUT_MAX   (10)
+#define RELAY_MAX   (2)
 
 #define IN0_PORT        PD
 #define IN0_PIN         BIT7
@@ -75,13 +76,13 @@
 #define OUT7_PIN         BIT4
 #define OUT7_PORT_PIN    PB4
 
-#define RELAY1_PORT        PB
-#define RELAY1_PIN         BIT2
-#define RELAY1_PORT_PIN    PB2
+#define RELAY0_PORT        PB
+#define RELAY0_PIN         BIT2
+#define RELAY0_PORT_PIN    PB2
 
-#define RELAY2_PORT        PB
-#define RELAY2_PIN         BIT3
-#define RELAY2_PORT_PIN    PB3
+#define RELAY1_PORT        PB
+#define RELAY1_PIN         BIT3
+#define RELAY1_PORT_PIN    PB3
 
 
 
@@ -91,6 +92,5 @@ void hal_handle_output_10ms_loop(void);
 
 extern volatile uint8_t g_input_state;
 extern volatile uint8_t g_output_state;
-
-
+extern volatile uint16_t g_relay_state;
 #endif
