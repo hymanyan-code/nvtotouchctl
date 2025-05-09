@@ -13,23 +13,23 @@
 #define REG_HOLDING_START (0x00+1)
 
 
-#define REG_HONGING_PRODUCT          (0)
-#define REG_HONGING_SW               (1)
-#define REG_HONGING_INPUT              (2) 
-#define REG_HONGING_OUTPUT               (3)
-#define REG_HONGING_RELAY               (4)
-#define REG_HONGING_ADC1             (5)
-#define REG_HONGING_ADC2             (6)
-#define REG_HONGING_TEMP_COEF_K      (7)
-#define REG_HONGING_TEMP_COEF_B      (8)
-#define REG_HONGING_TEMP_RES         (9)  
-#define REG_HONGING_TEMP             (10)  
-#define REG_HONGING_STEP_CTL        (11)
-#define REG_HONGING_STEP_SPEED      (12)
+#define REG_HONGING_PRODUCT              (0)
+#define REG_HONGING_SW                   (1)
+#define REG_HONGING_INPUT                  (2) 
+#define REG_HONGING_OUTPUT                   (3)
+#define REG_HONGING_RELAY                   (4)
+#define REG_HONGING_ADC1                 (5)
+#define REG_HONGING_ADC2                 (6)
+#define REG_HONGING_TEMP_COEF_K          (7)
+#define REG_HONGING_TEMP_COEF_B          (8)
+#define REG_HONGING_TEMP_RES             (9)  
+#define REG_HONGING_TEMP                 (10)  
+#define REG_HONGING_STEP_CTL            (11)
+#define REG_HONGING_STEP_SPEED          (12)
 
-#define REG_HONGING_DAC1          (14)
-#define REG_HONGING_DAC2          (15)
-
+#define REG_HONGING_DAC1                 (14)
+#define REG_HONGING_DAC2                 (15)
+       
 
 #define REG_HOLDING_NREGS            (16)
 
@@ -175,7 +175,7 @@ static void UpdateHoldingRegs(USHORT index)
     }
     else if(index == REG_HONGING_STEP_CTL)
     {
-        usRegHoldingBuf[REG_HONGING_STEP_CTL] = (uint16_t)HalStepperGetStepState()<<8 | HalStepperGetDir();  
+        usRegHoldingBuf[REG_HONGING_STEP_CTL] = (uint16_t)HalStepperGetStepperEnableState()<<8 | HalStepperGetDir();  
     }
     else if(index == REG_HONGING_STEP_SPEED|| index == REG_HONGING_STEP_SPEED +1)
     {
@@ -206,12 +206,12 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
     {
         
         g_output_state = value;
-
+        hal_handle_output_10ms_loop();
     }
     else if(index == REG_HONGING_RELAY)
     {
         g_relay_state = value;
-
+        hal_handle_relay_10ms_loop();
     }
     else if(index == REG_HONGING_TEMP_COEF_K)
     {
@@ -225,13 +225,15 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
     {
         if(value&0xFF00)
         {
-            HalStepperStart();
-            printf("pwm start!\r\n");
+           // HalStepperStart();
+            HalStepperEnHigh();
+            printf("stepper enable !\r\n");
         }
         else
         {
-            HalStepperStop();
-             printf("pwm stop!\r\n");
+            //HalStepperStop();
+            HalStepperEnLow();
+            printf("stepper disable!\r\n");
         }
         if(value&0x00FF)
         {

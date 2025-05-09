@@ -11,13 +11,13 @@ void HalStepperInit(void)
     GPIO_SetMode(DIR_PORT, DIR_PIN, GPIO_PMD_OUTPUT);
     DIR_PORT_PIN = 0;
 
-    
-
+    GPIO_SetMode(STEP_EN_PORT, STEP_EN_PIN, GPIO_PMD_OUTPUT);
+    STEP_EN_PORT_PIN = 1;
     // Enable output of BPWM0 channel 0
-    //BPWM_EnableOutput(BPWM1, BPWM_CH_2_MASK);
+    BPWM_EnableOutput(BPWM1, BPWM_CH_2_MASK);
     //BPWM_Start(BPWM1, BPWM_CH_2_MASK);
     BPWM_ConfigOutputChannel(BPWM1, 2, 200, 20);
-    //BPWM_Start(BPWM1, BPWM_CH_2_MASK);
+    BPWM_Start(BPWM1, BPWM_CH_2_MASK);
 
 }
 
@@ -36,6 +36,7 @@ void HalStepperSetDir(uint8_t dir)
     }
 }
 
+#if 0
 void HalStepperStart(void)
 {
     BPWM_ConfigOutputChannel(BPWM1, 2,  stepper.speed, 20);
@@ -51,6 +52,9 @@ void HalStepperStop(void)
     stepper.state = 0;
 }
 
+#endif
+
+
 void HalSetStepperSpeed(uint32_t speed)
 {
     BPWM_ConfigOutputChannel(BPWM1, 2, speed, 20);
@@ -62,9 +66,9 @@ uint32_t HalGetStepperSpeed(void)
     return stepper.speed;
 }
 
-uint8_t HalStepperGetStepState(void)
+uint8_t HalStepperGetStepperEnableState(void)
 {
-    return stepper.state;
+    return stepper.enable;
 }
 
 uint8_t HalStepperGetDir(void)
@@ -77,10 +81,11 @@ uint8_t HalStepperGetDir(void)
 void HalStepperEnHigh(void)
 {
     STEP_EN_PORT_PIN = 0;   
-
+    stepper.enable = 1;
 }
 
 void HalStepperEnLow(void)
 {
     STEP_EN_PORT_PIN = 1;  
+    stepper.enable = 0;
 }

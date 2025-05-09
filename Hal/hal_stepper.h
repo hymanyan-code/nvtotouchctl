@@ -22,22 +22,27 @@ void HalStepperInit(void);
 
 void HalStepperSetDir(uint8_t dir);
 
+#if 0
 void HalStepperStart(void);
 
 void HalStepperStop(void);
+#endif
+
 
 void HalSetStepperSpeed(uint32_t speed);
 
 uint32_t HalGetStepperSpeed(void);
 
-uint8_t HalStepperGetStepState(void);
+uint8_t HalStepperGetStepperEnableState(void);
 
 uint8_t HalStepperGetDir(void);
 
+void HalStepperEnHigh(void);
 
+void HalStepperEnLow(void);
 typedef struct
 {
-    uint8_t state;
+    uint8_t enable;
     uint8_t dir;
     uint32_t speed;
 } HalStepper;

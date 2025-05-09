@@ -110,7 +110,7 @@ void hal_relay_state_control(uint8_t id, uint8_t state)
             RELAY0_PORT_PIN = 0;
         }
     }
-    else (id == 1)
+    else if(id == 1)
     {
         if(state)
         {
@@ -287,8 +287,8 @@ void hal_handle_input_10ms_loop(void)
 
 void hal_handle_output_10ms_loop(void)
 {
-    static uint16_t bit_state;
-    static uint16_t bit_state_previou;
+    static uint16_t bit_state=0;
+    static uint16_t bit_state_previou=0;
     bit_state = g_output_state;
 
     for (uint8_t i = 0; i < OUTPUT_MAX; i++)

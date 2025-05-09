@@ -89,8 +89,9 @@
 void hal_io_init(void);
 void hal_handle_input_10ms_loop(void);
 void hal_handle_output_10ms_loop(void);
+void hal_handle_relay_10ms_loop(void);
 
-extern volatile uint8_t g_input_state;
-extern volatile uint8_t g_output_state;
+extern volatile uint16_t g_input_state;
+extern volatile uint16_t g_output_state;
 extern volatile uint16_t g_relay_state;
 #endif
