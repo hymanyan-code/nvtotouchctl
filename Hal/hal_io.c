@@ -21,6 +21,7 @@ void hal_io_init(void)
     GPIO_SetMode(IN7_PORT, IN7_PIN, GPIO_PMD_INPUT);
     GPIO_SetMode(IN8_PORT, IN8_PIN, GPIO_PMD_INPUT);
 
+    GPIO_SetMode(OUT0_PORT, OUT0_PIN, GPIO_PMD_OUTPUT);
     GPIO_SetMode(OUT1_PORT, OUT1_PIN, GPIO_PMD_OUTPUT);
     GPIO_SetMode(OUT2_PORT, OUT2_PIN, GPIO_PMD_OUTPUT);
     GPIO_SetMode(OUT3_PORT, OUT3_PIN, GPIO_PMD_OUTPUT);
@@ -32,7 +33,7 @@ void hal_io_init(void)
     GPIO_SetMode(RELAY0_PORT, RELAY0_PIN, GPIO_PMD_OUTPUT);
     GPIO_SetMode(RELAY1_PORT, RELAY1_PIN, GPIO_PMD_OUTPUT);
 
-
+    OUT0_PORT_PIN = 0;
     OUT1_PORT_PIN = 0;
     OUT2_PORT_PIN = 0;
     OUT3_PORT_PIN = 0;
@@ -210,6 +211,7 @@ void hal_output_set(unsigned char port, unsigned char state)
         {
             OUT6_PORT_PIN = 0;
         }
+        break;
     case 7:
         if (state)
         {
@@ -222,25 +224,7 @@ void hal_output_set(unsigned char port, unsigned char state)
 
         break;
 
-    case 8:
-        if (state)
-        {
-            RELAY0_PORT_PIN = 1;
-        }
-        else
-        {
-            RELAY0_PORT_PIN = 0;
-        }
 
-    case 9:
-        if (state)
-        {
-            RELAY1_PORT_PIN = 1;
-        }
-        else
-        {
-            RELAY1_PORT_PIN = 0;
-        }
 
     default:
         break;
@@ -297,13 +281,15 @@ void hal_handle_output_10ms_loop(void)
         {
             if (bit_state & (1 << i))
             {
-                hal_relay_state_control(i , 1);
-                printf("relay %d is on\r\n", i );
+                hal_output_set(i , 1);
+                printf("Output %d is on\r\n", i );
+               
             }
             else
             {
-                hal_relay_state_control(i , 0);
-                printf("relay %d is off\r\n", i );
+                hal_output_set(i , 0);
+                printf("Output %d is off\r\n", i );
+              
             }
         }
     }
@@ -315,20 +301,20 @@ void hal_handle_output_10ms_loop(void)
 
 void hal_handle_relay_10ms_loop(void)
 {
-    static uint16_t relay_state;
+    static uint16_t relay_state=0;
     for(uint8_t i =0; i<RELAY_MAX;i++)
     {
         if ((g_relay_state & (1 << i)) != (relay_state & (1 << i)))
         {
             if (g_relay_state & (1 << i))
             {
-                hal_output_set(i , 1);
-                printf("Output %d is on\r\n", i );
+                hal_relay_state_control(i , 1);
+                printf("relay %d is on\r\n", i );
             }
             else
             {
-                hal_output_set(i , 0);
-                printf("Output %d is off\r\n", i );
+                hal_relay_state_control(i , 0);
+                printf("relay %d is off\r\n", i );
             }
         }
 

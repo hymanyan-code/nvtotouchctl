@@ -167,8 +167,8 @@ int main(void)
     printf("Task Initialized,ADC @%d Hz\n",ADC_GetConversionRate());	
 	OS_CreatTask(OS_TASK1,hal_task,1,OS_RUN);	
 
-    //mt_task_init();	
-	//OS_CreatTask(OS_TASK2,mt_task,1,OS_RUN);	
+    mt_task_init();	
+	OS_CreatTask(OS_TASK2,mt_task,1,OS_RUN);	
 	
     
     OS_Start();	 

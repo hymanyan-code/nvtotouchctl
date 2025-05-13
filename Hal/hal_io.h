@@ -2,7 +2,7 @@
 #define ___HAL_IO_H_
 
 #define INPUT_MAX   (9)
-#define OUTPUT_MAX   (10)
+#define OUTPUT_MAX   (8)
 #define RELAY_MAX   (2)
 
 #define IN0_PORT        PD

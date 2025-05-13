@@ -58,8 +58,8 @@ void HalIflashInit(void)
     u32Data = FMC_ReadDataFlashBaseAddr();
     printf("  Data Flash Base Address ............... [0x%08x]\n", u32Data);
     
-    printf("start flash test!\r\n");
-    FlashTest(DATA_PAGE0_ADDRESS, DATA_PAGE_END_ADDRESS, TEST_PATTERN);
+   // printf("start flash test!\r\n");
+   // FlashTest(DATA_PAGE0_ADDRESS, DATA_PAGE_END_ADDRESS, TEST_PATTERN);
 
 
 
