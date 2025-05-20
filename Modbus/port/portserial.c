@@ -105,8 +105,8 @@ xMBPortSerialInit( UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
  #if MODBUS_UART4_ENABLE==1
         SYS_ResetModule(UART4_RST);
 
-        UART_Open(UART4, 19200);
-        UART_SetLine_Config(UART4, 19200, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
+        UART_Open(UART4, ulBaudRate);
+        UART_SetLine_Config(UART4, ulBaudRate, UART_WORD_LEN_8,  UART_PARITY_EVEN,  UART_STOP_BIT_1);
 
         NVIC_EnableIRQ(UART4_IRQn);
 #else

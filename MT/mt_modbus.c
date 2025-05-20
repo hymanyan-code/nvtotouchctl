@@ -8,6 +8,10 @@
 #include "hal_stepper.h"
 #include "hal_dac.h"
 #include <math.h>
+#include "hal_iflash.h"
+
+static MtModbus_t mt_modbus_config = {0};
+
 #define SW_VERSION    (0X0001)
 
 #define REG_HOLDING_START (0x00+1)
@@ -30,8 +34,9 @@
 #define REG_HONGING_DAC1                 (14)
 #define REG_HONGING_DAC2                 (15)
        
-
-#define REG_HOLDING_NREGS            (16)
+#define REG_HONGING_BAUDRATE            (16)
+#define REG_HONGING_SLAVE_ADDRESS        (17)
+#define REG_HOLDING_NREGS            (18)
 
 #define MB_SLAVE_ADRESS 0x31
 USHORT usRegHoldingBuf[REG_HOLDING_NREGS];
@@ -120,7 +125,7 @@ void ModbusRegistersInit(void)
 
 void MtModbusInit(void)
 {
-    ( void )eMBInit( MB_RTU, MB_SLAVE_ADRESS, 4 , 19200, MB_PAR_NONE );  
+    ( void )eMBInit( MB_RTU, g_nv_data.nvdata_mb.slave_address, 4 , g_nv_data.nvdata_mb.baudrate, MB_PAR_NONE );  
 
     ModbusRegistersInit();
 
@@ -192,6 +197,16 @@ static void UpdateHoldingRegs(USHORT index)
     {
         usRegHoldingBuf[REG_HONGING_DAC2] = dac_voltage[1];
         //printf("update reg13:%d\r\n",usRegHoldingBuf[REG_HONGING_DAC2]);
+    }
+    else if (index == REG_HONGING_BAUDRATE)
+    {
+        usRegHoldingBuf[REG_HONGING_BAUDRATE] = g_nv_data.nvdata_mb.baudrate;
+        //printf("update reg14:%d\r\n",usRegHoldingBuf[REG_HONGING_BAUDRATE]);
+    }
+    else if (index == REG_HONGING_SLAVE_ADDRESS)
+    {
+        usRegHoldingBuf[REG_HONGING_SLAVE_ADDRESS] = g_nv_data.nvdata_mb.slave_address;
+        //printf("update reg15:%d\r\n",usRegHoldingBuf[REG_HONGING_SLAVE_ADDRESS]);
     }
     //printf("index__%d\r\n",index);
 
@@ -273,6 +288,29 @@ static eMBErrorCode WtiteHoldingRegs(USHORT index, USHORT value)
         dac_voltage[1] = (uint16_t)value;
         printf("dac2 voltage:[%d][%d]\r\n",value,dac_voltage[1]);
         HalDac1SetVoltage(2,(float)value/1000/2);
+    }
+    else if(index == REG_HONGING_BAUDRATE)
+    {
+        g_nv_data.nvdata_mb.baudrate = value;
+        printf("baudrate:%d\r\n",g_nv_data.nvdata_mb.baudrate);
+
+        eMBDisable();
+        eMBClose();
+        ( void )eMBInit( MB_RTU, g_nv_data.nvdata_mb.slave_address, 4 , g_nv_data.nvdata_mb.baudrate, MB_PAR_NONE );  
+        eMBEnable();
+        flag_iflash_update = 1;
+    }
+    else if(index == REG_HONGING_SLAVE_ADDRESS)
+    {
+        g_nv_data.nvdata_mb.slave_address = value;
+        printf("slave address:%d\r\n",g_nv_data.nvdata_mb.slave_address);    
+
+        eMBDisable();
+        eMBClose();
+        ( void )eMBInit( MB_RTU, g_nv_data.nvdata_mb.slave_address, 4 , g_nv_data.nvdata_mb.baudrate, MB_PAR_NONE );  
+        eMBEnable();
+        flag_iflash_update = 1;
+
     }
     else
     {

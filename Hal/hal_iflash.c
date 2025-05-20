@@ -1,15 +1,43 @@
 #include "M0518.h"
 #include "hal_iflash.h"
 #include <stdio.h>
+#include <string.h>
 
 
+#define NVTAG_VER 0x0001
+
+
+
+DeviceNVData_t g_nv_data = {0};
+uint8_t flag_iflash_update = 0;
 static int  SetDataFlashBase(uint32_t u32DFBA);
 static int32_t  FlashTest(uint32_t u32StartAddr, uint32_t u32EndAddr, uint32_t u32Pattern);
 #define TEST_PATTERN                0x5A5A5A5A
 
+
+
+
+
+
+void HalIflashDefaultData(void)
+{
+    g_nv_data.nvdata_ver = NVTAG_VER;
+    g_nv_data.nvdata_mb.baudrate = MB_BAUD_19200;
+    g_nv_data.nvdata_mb.slave_address = 0x30;;
+    HalIflashWriteBufInOnePage(DATA_PAGE0_ADDRESS, (uint32_t*)&g_nv_data, sizeof(DeviceNVData_t)/4 + 1);
+}
+
+
+
+
+
+
 void HalIflashInit(void)
 {
     uint32_t i, u32Data;
+    uint32_t u32_len = 0;
+    uint8_t remain = 0;
+    uint32_t remain_data = 0;
     SYS_UnlockReg();
     FMC_Open();
 
@@ -61,9 +89,26 @@ void HalIflashInit(void)
    // printf("start flash test!\r\n");
    // FlashTest(DATA_PAGE0_ADDRESS, DATA_PAGE_END_ADDRESS, TEST_PATTERN);
 
+    u32_len =sizeof(DeviceNVData_t)/4;
+    remain = sizeof(DeviceNVData_t)%4;
+    HalIflashReadInOnePage(DATA_PAGE0_ADDRESS, (uint32_t*)&g_nv_data, u32_len);
+    if(remain)
+    {
+        HalIflashReadInOnePage(DATA_PAGE0_ADDRESS + u32_len*4, (uint32_t*)&remain_data, 1);
+        memcpy((uint8_t*)&g_nv_data + u32_len*4, (uint8_t*)&remain_data, remain);
+    }
 
-
-
+    if(g_nv_data.nvdata_ver != NVTAG_VER)
+    {
+        printf("Data flash version error!\r\n");
+        HalIflashDefaultData();
+    }
+    else
+    {
+        printf("Not Volatile Data version OK!\r\n");
+        printf("Modbus baudrate:%d\r\n",g_nv_data.nvdata_mb.baudrate);
+        printf("Modbus slave address:%d\r\n",g_nv_data.nvdata_mb.slave_address);
+    }
 
     /* Disable FMC ISP function */
     FMC_Close();
@@ -135,7 +180,7 @@ int8_t HalIflashReadInOnePage(uint32_t addr, uint32_t* data, uint16_t len)
     uint32_t i;
     int8_t ret = 0;
 
-    if(addr < DATA_PAGE0_ADDRESS || addr > DATA_PAGE7_ADDRESS)
+    if(addr < DATA_PAGE0_ADDRESS || addr > (DATA_PAGE_END_ADDRESS-3))
     {
         printf("Error: Address out of range!\n");
         return -1;
@@ -280,4 +325,14 @@ int32_t  FlashTest(uint32_t u32StartAddr, uint32_t u32EndAddr, uint32_t u32Patte
     }
     printf("\r    Flash Test Passed.          \n");
     return 0;
+}
+
+
+void HalIflashSaveData10ms(void)
+{
+    if(flag_iflash_update)
+    {
+        HalIflashWriteBufInOnePage(DATA_PAGE0_ADDRESS, (uint32_t*)&g_nv_data, sizeof(DeviceNVData_t)/4 + 1);
+        flag_iflash_update = 0;
+    }
 }
